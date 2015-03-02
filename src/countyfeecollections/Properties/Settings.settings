@@ -1,0 +1,36 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="county.feecollections.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="DBServerName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">sqlServerName</Value>
+    </Setting>
+    <Setting Name="DBName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">civilfeecollections</Value>
+    </Setting>
+    <Setting Name="DBUsername" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="DBPassword" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="DBIntegratedSecurity" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="MailMergeDirectory" Type="System.String" Scope="User">
+      <Value Profile="(Default)">\\fileServerName\AttorneyCollections\Templates</Value>
+    </Setting>
+    <Setting Name="LenientBilling" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="HomeCounty" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">67</Value>
+    </Setting>
+    <Setting Name="HomeCountyName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">CountyName</Value>
+    </Setting>
+    <Setting Name="DocDirectory" Type="System.String" Scope="User">
+      <Value Profile="(Default)">\\fileServerName\AttorneyCollections\Documents</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

@@ -1,0 +1,556 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CA54E4C8-AE18-441C-9F95-0C28AC9FB2D7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>county.feecollections</RootNamespace>
+    <AssemblyName>feecollections</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <StartupObject>county.feecollections.Program</StartupObject>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <ApplicationIcon>feecollection.ico</ApplicationIcon>
+    <ManifestCertificateThumbprint>F64F507CD651807DEA7238B5373F9EC54C69C6E0</ManifestCertificateThumbprint>
+    <ManifestKeyFile>
+    </ManifestKeyFile>
+    <GenerateManifests>false</GenerateManifests>
+    <SignManifests>false</SignManifests>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <PublishUrl>http://clickonce/install/CivilAttorney/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>33</ApplicationRevision>
+    <ApplicationVersion>1.4.1.33</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+    <CodeAnalysisRules>
+    </CodeAnalysisRules>
+    <CodeAnalysisRuleSet>Migrated rules for feecollections.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="forms\frmMailMerge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmMailMerge.designer.cs">
+      <DependentUpon>frmMailMerge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmMailMergeSaveAs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmMailMergeSaveAs.Designer.cs">
+      <DependentUpon>frmMailMergeSaveAs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmMailMergeTemplates.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmMailMergeTemplates.Designer.cs">
+      <DependentUpon>frmMailMergeTemplates.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmNotes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmNotes.Designer.cs">
+      <DependentUpon>frmNotes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmPayment.Designer.cs">
+      <DependentUpon>frmPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmPaymentArrangementTypes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmPaymentArrangementTypes.Designer.cs">
+      <DependentUpon>frmPaymentArrangementTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmError.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmError.Designer.cs">
+      <DependentUpon>frmError.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmFeeTypes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmFeeTypes.Designer.cs">
+      <DependentUpon>frmFeeTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmPlanNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmPlanNew.Designer.cs">
+      <DependentUpon>frmPlanNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmRestrictedCasePrefixes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmRestrictedCasePrefixes.Designer.cs">
+      <DependentUpon>frmRestrictedCasePrefixes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmSSRS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmSSRS.designer.cs">
+      <DependentUpon>frmSSRS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="objects\baseobject.cs" />
+    <Compile Include="objects\basecollection.cs" />
+    <Compile Include="forms\frmEmployers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmEmployers.Designer.cs">
+      <DependentUpon>frmEmployers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmDefendantEmployers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmDefendantEmployers.Designer.cs">
+      <DependentUpon>frmDefendantEmployers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmOptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmOptions.Designer.cs">
+      <DependentUpon>frmOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="objects\defendantfeepayments.cs" />
+    <Compile Include="objects\employerdefendanttypeconverter.cs" />
+    <Compile Include="objects\feetype.cs" />
+    <Compile Include="objects\mailmerge.cs" />
+    <Compile Include="objects\planfeepayments.cs" />
+    <Compile Include="objects\printdelinquent.cs" />
+    <Compile Include="objects\restrictedcaseprefixes.cs" />
+    <Compile Include="objects\restrictedcaseprefix.cs" />
+    <Compile Include="objects\planpaymentarrangements.cs" />
+    <Compile Include="objects\planpaymentarrangement.cs" />
+    <Compile Include="objects\feepayments.cs" />
+    <Compile Include="objects\feepayment.cs" />
+    <Compile Include="objects\paymentarrangementtypes.cs" />
+    <Compile Include="objects\paymentarrangementtype.cs" />
+    <Compile Include="objects\payperiodtypes.cs" />
+    <Compile Include="objects\payperiodtype.cs" />
+    <Compile Include="objects\planfees.cs" />
+    <Compile Include="objects\planfee.cs" />
+    <Compile Include="objects\plancase.cs" />
+    <Compile Include="objects\plancases.cs" />
+    <Compile Include="objects\employersdefendant.cs" />
+    <Compile Include="objects\employerdefendant.cs" />
+    <Compile Include="objects\employers.cs" />
+    <Compile Include="objects\employer.cs" />
+    <Compile Include="objects\exceptionmanager.cs" />
+    <Compile Include="objects\dbsettings.cs" />
+    <Compile Include="objects\defendant.cs" />
+    <Compile Include="objects\defendants.cs" />
+    <Compile Include="objects\exception.cs" />
+    <Compile Include="objects\feetypes.cs" />
+    <Compile Include="objects\helper.cs" />
+    <Compile Include="objects\myfilterfield.cs" />
+    <Compile Include="objects\mymessagebox.cs">
+    </Compile>
+    <Compile Include="objects\plan.cs" />
+    <Compile Include="objects\plans.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="forms\frmPayment.resx">
+      <DependentUpon>frmPayment.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmPaymentArrangementTypes.resx">
+      <DependentUpon>frmPaymentArrangementTypes.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmEmployers.resx">
+      <DependentUpon>frmEmployers.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmDefendantEmployers.resx">
+      <DependentUpon>frmDefendantEmployers.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmError.resx">
+      <DependentUpon>frmError.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmFeeTypes.resx">
+      <DependentUpon>frmFeeTypes.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmOptions.resx">
+      <DependentUpon>frmOptions.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmPlanNew.resx">
+      <DependentUpon>frmPlanNew.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports\rptNonCompliance.rdlc" />
+    <EmbeddedResource Include="reports\rptRestitution.rdlc" />
+    <EmbeddedResource Include="reports\rptBalanceLess100.rdlc" />
+    <EmbeddedResource Include="usercontrols\ucPaymentArrangements.resx">
+      <DependentUpon>ucPaymentArrangements.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usercontrols\ucCases.resx">
+      <DependentUpon>ucCases.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usercontrols\ucDefendant.resx">
+      <DependentUpon>ucDefendant.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usercontrols\ucEmployer.resx">
+      <DependentUpon>ucEmployer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usercontrols\ucFees.resx">
+      <DependentUpon>ucFees.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usercontrols\ucFilter.resx">
+      <DependentUpon>ucFilter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usercontrols\ucPayments.resx">
+      <DependentUpon>ucPayments.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usercontrols\ucPlans.resx">
+      <DependentUpon>ucPlans.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="objects\localuser.cs" />
+    <Compile Include="usercontrols\ucCriteriaAccountStatus.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="usercontrols\ucCriteriaAccountStatus.designer.cs">
+      <DependentUpon>ucCriteriaAccountStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="usercontrols\ucCriteriaCollectionsBreakdown.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="usercontrols\ucCriteriaCollectionsBreakdown.Designer.cs">
+      <DependentUpon>ucCriteriaCollectionsBreakdown.cs</DependentUpon>
+    </Compile>
+    <Compile Include="usercontrols\ucCriteriaSubReportCases.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="usercontrols\ucCriteriaSubReportCases.designer.cs">
+      <DependentUpon>ucCriteriaSubReportCases.cs</DependentUpon>
+    </Compile>
+    <Compile Include="usercontrols\ucPaymentArrangements.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="usercontrols\ucPaymentArrangements.Designer.cs">
+      <DependentUpon>ucPaymentArrangements.cs</DependentUpon>
+    </Compile>
+    <Compile Include="usercontrols\ucCases.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="usercontrols\ucCases.Designer.cs">
+      <DependentUpon>ucCases.cs</DependentUpon>
+    </Compile>
+    <Compile Include="usercontrols\ucDefendant.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="usercontrols\ucDefendant.Designer.cs">
+      <DependentUpon>ucDefendant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="usercontrols\ucEmployer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="usercontrols\ucEmployer.Designer.cs">
+      <DependentUpon>ucEmployer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="usercontrols\ucFees.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="usercontrols\ucFees.Designer.cs">
+      <DependentUpon>ucFees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="usercontrols\ucFilter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="usercontrols\ucFilter.Designer.cs">
+      <DependentUpon>ucFilter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="usercontrols\ucPayments.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="usercontrols\ucPayments.Designer.cs">
+      <DependentUpon>ucPayments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="usercontrols\ucPlans.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="usercontrols\ucPlans.Designer.cs">
+      <DependentUpon>ucPlans.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.ReportViewer.10.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft Visual Studio 2010 Report Viewer</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\DataSources\Defendant.datasource" />
+    <None Include="Properties\DataSources\Employer.datasource" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\remove.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\DataSources\FeeType.datasource" />
+    <None Include="Properties\DataSources\PaymentArrangementType.datasource" />
+    <None Include="Properties\DataSources\PayPeriodType.datasource" />
+    <None Include="Properties\DataSources\Plan.datasource" />
+    <None Include="Properties\DataSources\PlanCase.datasource" />
+    <None Include="Properties\DataSources\PlanFee.datasource" />
+    <None Include="Properties\DataSources\PlanPaymentArrangement.datasource" />
+    <None Include="Resources\cancel.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\DataSources\DefendantFeePayments.datasource" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\archive.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\sub_add.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="forms\frmMailMerge.resx">
+      <DependentUpon>frmMailMerge.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmMailMergeSaveAs.resx">
+      <DependentUpon>frmMailMergeSaveAs.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmMailMergeTemplates.resx">
+      <DependentUpon>frmMailMergeTemplates.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmNotes.resx">
+      <DependentUpon>frmNotes.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\sub_remove.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>4</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <Private>True</Private>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Word">
+      <Guid>{00020905-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>8</VersionMajor>
+      <VersionMinor>4</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <Private>True</Private>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paste.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\feecollection.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="forms\frmSSRS.resx">
+      <DependentUpon>frmSSRS.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usercontrols\ucCriteriaAccountStatus.resx">
+      <DependentUpon>ucCriteriaAccountStatus.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usercontrols\ucCriteriaCollectionsBreakdown.resx">
+      <DependentUpon>ucCriteriaCollectionsBreakdown.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usercontrols\ucCriteriaSubReportCases.resx">
+      <DependentUpon>ucCriteriaSubReportCases.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\collapse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\expand.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="feecollections_TemporaryKey.pfx" />
+    <None Include="Properties\DataSources\RestrictedCasePrefix.datasource" />
+    <None Include="Resources\msword.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="forms\frmRestrictedCasePrefixes.resx">
+      <DependentUpon>frmRestrictedCasePrefixes.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\notes.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="reports\rptJailReport.rdlc" />
+    <EmbeddedResource Include="reports\rptAccountStatus.rdlc" />
+    <EmbeddedResource Include="reports\rptCaseClm1.rdlc" />
+    <EmbeddedResource Include="reports\rptCaseClm2.rdlc" />
+    <EmbeddedResource Include="reports\rptCollectionsBreakdown.rdlc" />
+    <EmbeddedResource Include="reports\rptCommitDateStatus.rdlc" />
+    <EmbeddedResource Include="reports\rptProbation.rdlc" />
+    <EmbeddedResource Include="Resources\payment.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="feecollection.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
