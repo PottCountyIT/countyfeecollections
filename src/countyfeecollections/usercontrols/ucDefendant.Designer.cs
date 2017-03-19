@@ -95,6 +95,12 @@ namespace county.feecollections
             this.ucEmployer = new county.feecollections.ucEmployer();
             this.txtProbationOfficer = new System.Windows.Forms.TextBox();
             this.chkHasProbationOfficer = new System.Windows.Forms.CheckBox();
+            this.lblDaysInJail = new System.Windows.Forms.Label();
+            this.lblJudgmentDate = new System.Windows.Forms.Label();
+            this.lblBookingNumber = new System.Windows.Forms.Label();
+            this.tbDaysInJail = new System.Windows.Forms.MaskedTextBox();
+            this.tbBookingNumber = new System.Windows.Forms.TextBox();
+            this.tbJudgmentDate = new System.Windows.Forms.MaskedTextBox();
             grpDefendnatInfo = new System.Windows.Forms.GroupBox();
             lblCellPhone = new System.Windows.Forms.Label();
             lblHomePhone = new System.Windows.Forms.Label();
@@ -171,6 +177,12 @@ namespace county.feecollections
             // 
             // splitContainerDefendantDetail.Panel2
             // 
+            this.splitContainerDefendantDetail.Panel2.Controls.Add(this.tbJudgmentDate);
+            this.splitContainerDefendantDetail.Panel2.Controls.Add(this.tbBookingNumber);
+            this.splitContainerDefendantDetail.Panel2.Controls.Add(this.tbDaysInJail);
+            this.splitContainerDefendantDetail.Panel2.Controls.Add(this.lblBookingNumber);
+            this.splitContainerDefendantDetail.Panel2.Controls.Add(this.lblJudgmentDate);
+            this.splitContainerDefendantDetail.Panel2.Controls.Add(this.lblDaysInJail);
             this.splitContainerDefendantDetail.Panel2.Controls.Add(this.dgvPlanSummary);
             this.splitContainerDefendantDetail.Panel2.Controls.Add(this.mskBarredUntil);
             this.splitContainerDefendantDetail.Panel2.Controls.Add(this.lblBarredUntil);
@@ -504,7 +516,7 @@ namespace county.feecollections
             this.dgvPlanSummary.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.SystemColors.Window;
             this.dgvPlanSummary.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.SystemColors.WindowText;
             this.dgvPlanSummary.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPlanSummary.Size = new System.Drawing.Size(432, 144);
+            this.dgvPlanSummary.Size = new System.Drawing.Size(435, 144);
             this.dgvPlanSummary.TabIndex = 15;
             // 
             // planname
@@ -586,7 +598,7 @@ namespace county.feecollections
             // mskBarredUntil
             // 
             this.mskBarredUntil.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mskBarredUntil.Location = new System.Drawing.Point(66, 167);
+            this.mskBarredUntil.Location = new System.Drawing.Point(62, 147);
             this.mskBarredUntil.Mask = "00/00/0000";
             this.mskBarredUntil.Name = "mskBarredUntil";
             this.mskBarredUntil.Size = new System.Drawing.Size(70, 20);
@@ -598,7 +610,7 @@ namespace county.feecollections
             // 
             this.lblBarredUntil.AutoSize = true;
             this.lblBarredUntil.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBarredUntil.Location = new System.Drawing.Point(7, 171);
+            this.lblBarredUntil.Location = new System.Drawing.Point(3, 151);
             this.lblBarredUntil.Name = "lblBarredUntil";
             this.lblBarredUntil.Size = new System.Drawing.Size(65, 13);
             this.lblBarredUntil.TabIndex = 14;
@@ -622,7 +634,7 @@ namespace county.feecollections
             this.ucEmployer.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ucEmployer.Location = new System.Drawing.Point(0, 237);
             this.ucEmployer.Name = "ucEmployer";
-            this.ucEmployer.Size = new System.Drawing.Size(432, 112);
+            this.ucEmployer.Size = new System.Drawing.Size(435, 112);
             this.ucEmployer.TabIndex = 12;
             // 
             // txtProbationOfficer
@@ -632,7 +644,7 @@ namespace county.feecollections
             this.txtProbationOfficer.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtProbationOfficer.Location = new System.Drawing.Point(109, 189);
             this.txtProbationOfficer.Name = "txtProbationOfficer";
-            this.txtProbationOfficer.Size = new System.Drawing.Size(323, 20);
+            this.txtProbationOfficer.Size = new System.Drawing.Size(326, 20);
             this.txtProbationOfficer.TabIndex = 7;
             // 
             // chkHasProbationOfficer
@@ -645,6 +657,66 @@ namespace county.feecollections
             this.chkHasProbationOfficer.TabIndex = 6;
             this.chkHasProbationOfficer.Text = "Probation Officer:";
             this.chkHasProbationOfficer.UseVisualStyleBackColor = true;
+            // 
+            // lblDaysInJail
+            // 
+            this.lblDaysInJail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblDaysInJail.AutoSize = true;
+            this.lblDaysInJail.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.lblDaysInJail.Location = new System.Drawing.Point(146, 151);
+            this.lblDaysInJail.Name = "lblDaysInJail";
+            this.lblDaysInJail.Size = new System.Drawing.Size(70, 13);
+            this.lblDaysInJail.TabIndex = 16;
+            this.lblDaysInJail.Text = "# Days in Jail";
+            // 
+            // lblJudgmentDate
+            // 
+            this.lblJudgmentDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblJudgmentDate.AutoSize = true;
+            this.lblJudgmentDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.lblJudgmentDate.Location = new System.Drawing.Point(146, 171);
+            this.lblJudgmentDate.Name = "lblJudgmentDate";
+            this.lblJudgmentDate.Size = new System.Drawing.Size(79, 13);
+            this.lblJudgmentDate.TabIndex = 17;
+            this.lblJudgmentDate.Text = "Judgment Date";
+            // 
+            // lblBookingNumber
+            // 
+            this.lblBookingNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblBookingNumber.AutoSize = true;
+            this.lblBookingNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.lblBookingNumber.Location = new System.Drawing.Point(273, 150);
+            this.lblBookingNumber.Name = "lblBookingNumber";
+            this.lblBookingNumber.Size = new System.Drawing.Size(56, 13);
+            this.lblBookingNumber.TabIndex = 18;
+            this.lblBookingNumber.Text = "Booking #";
+            // 
+            // tbDaysInJail
+            // 
+            this.tbDaysInJail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbDaysInJail.Location = new System.Drawing.Point(222, 147);
+            this.tbDaysInJail.Mask = "#####";
+            this.tbDaysInJail.Name = "tbDaysInJail";
+            this.tbDaysInJail.Size = new System.Drawing.Size(45, 20);
+            this.tbDaysInJail.TabIndex = 22;
+            // 
+            // tbBookingNumber
+            // 
+            this.tbBookingNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbBookingNumber.Location = new System.Drawing.Point(330, 147);
+            this.tbBookingNumber.MaxLength = 10;
+            this.tbBookingNumber.Name = "tbBookingNumber";
+            this.tbBookingNumber.Size = new System.Drawing.Size(99, 20);
+            this.tbBookingNumber.TabIndex = 23;
+            // 
+            // tbJudgmentDate
+            // 
+            this.tbJudgmentDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbJudgmentDate.Location = new System.Drawing.Point(222, 168);
+            this.tbJudgmentDate.Mask = "00/00/0000";
+            this.tbJudgmentDate.Name = "tbJudgmentDate";
+            this.tbJudgmentDate.Size = new System.Drawing.Size(80, 20);
+            this.tbJudgmentDate.TabIndex = 24;
             // 
             // ucDefendant
             // 
@@ -704,5 +776,11 @@ namespace county.feecollections
         private System.Windows.Forms.DataGridViewCheckBoxColumn Insurance;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Noncompliance;
         private System.Windows.Forms.DataGridViewTextBoxColumn fileddate;
+        private System.Windows.Forms.TextBox tbBookingNumber;
+        private System.Windows.Forms.MaskedTextBox tbDaysInJail;
+        private System.Windows.Forms.Label lblBookingNumber;
+        private System.Windows.Forms.Label lblJudgmentDate;
+        private System.Windows.Forms.Label lblDaysInJail;
+        private System.Windows.Forms.MaskedTextBox tbJudgmentDate;
     }
 }

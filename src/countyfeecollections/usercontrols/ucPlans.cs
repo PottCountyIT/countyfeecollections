@@ -140,6 +140,23 @@ namespace county.feecollections
             ucPayments.Enabled = IsEnabled;
             cmbPlans.Enabled = IsEnabled;
 
+            //Jail enhancements
+            LocalUser user = new LocalUser();
+            if (user.JailMode)
+            {
+                chkCAPP.Visible = false;
+                chkNonCAPP.Visible = false;
+                chkFiled.Visible = false;
+                chkNoncompliance.Visible = false;
+                chkInsurance.Visible = false;
+            } else
+            {
+                chkCAPP.Visible = true;
+                chkNonCAPP.Visible = true;
+                chkFiled.Visible = true;
+                chkNoncompliance.Visible = true;
+                chkInsurance.Visible = true;
+            }
         } 
         #endregion
 

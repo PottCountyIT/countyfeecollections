@@ -92,6 +92,34 @@ namespace county.feecollections
             this.txtProbationOfficer.DataBindings.Add( "Text", bindingDefendants, "ProbationOfficer", true, DataSourceUpdateMode.OnPropertyChanged );
             this.mskBarredUntil.DataBindings.Add( "Text", bindingDefendants, "BarredUntil", true, DataSourceUpdateMode.OnPropertyChanged, "", "MM/dd/yyyy" );
             this.mskBarredUntil.DataBindings["Text"].Parse += new ConvertEventHandler( mskdTextBoxValidator );
+
+            this.tbDaysInJail.DataBindings.Add("SelectedValue", bindingDefendants, "DaysInJail", true, DataSourceUpdateMode.OnPropertyChanged);
+            this.tbBookingNumber.DataBindings.Add("Text", bindingDefendants, "BookingNumber", true, DataSourceUpdateMode.OnPropertyChanged);
+            this.tbJudgmentDate.DataBindings.Add("Text", bindingDefendants, "JudgmentDate", true, DataSourceUpdateMode.OnPropertyChanged, "", "MM/dd/yyyy");
+            LocalUser user = new LocalUser();
+            if (user.JailMode)
+            {
+                lblDaysInJail.Visible = false;
+                tbDaysInJail.Visible = false;
+                lblBookingNumber.Visible = false;
+                tbBookingNumber.Visible = false;
+                lblJudgmentDate.Visible = false;
+                tbJudgmentDate.Visible = false;
+                chkHasProbationOfficer.Visible = false;
+                txtProbationOfficer.Visible = false;
+
+            }
+            else
+            {
+                lblDaysInJail.Visible = true;
+                tbDaysInJail.Visible = true;
+                lblBookingNumber.Visible = true;
+                tbBookingNumber.Visible = true;
+                lblJudgmentDate.Visible = true;
+                tbJudgmentDate.Visible = true;
+                chkHasProbationOfficer.Visible = true;
+                txtProbationOfficer.Visible = true;
+            }
         } 
         #endregion
 
@@ -100,6 +128,7 @@ namespace county.feecollections
         {
             this.txtFirstName.Focus();
             this.txtFirstName.Select( 0, 0 );
+
         }    
         #endregion                 
 

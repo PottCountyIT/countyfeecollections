@@ -62,7 +62,7 @@ namespace county.feecollections
             const string sql = "SELECT defendantid, firstname, middlename, lastname, aka, ssn, birthdate, driverslicense, "
                     + "street1, street2, city, stateid, zip, phonehome, phonemobile, "
                     + "hasprobationofficer, probationofficer, "
-                    + "barreduntil, notes, active, updatedby, updateddate "
+                    + "barreduntil, notes, active, daysinjail, bookingnumber, judgmentdate, updatedby, updateddate "
                     + "FROM Defendant "
                     + "WHERE active = 1 "
                     + "ORDER BY lastname, firstname; ";
@@ -97,6 +97,7 @@ namespace county.feecollections
                 + "defendant.phonehome, defendant.phonemobile, "
                 + "defendant.hasprobationofficer, defendant.probationofficer, "
                 + "defendant.barreduntil, defendant.notes, defendant.active, "
+                + "defendantemployers.daysinjail, defendantemployers.bookingnumber, defendantemployers.judgmentdate,"
                 + "defendantemployers.updatedby, defendantemployers.updateddate "
                 + "FROM Employer "
                 + "LEFT OUTER JOIN DefendantEmployers ON employer.employerid = defendantemployers.employerid "

@@ -73,6 +73,7 @@ namespace county.feecollections
 
                 cbbCounties.SelectedValue = _user.HomeCountyId;
                 cbxLenientBilling.Checked = _user.LenientBilling;
+                cbxJailMode.Checked = _user.JailMode;
             }
             catch
             {
@@ -161,6 +162,7 @@ namespace county.feecollections
             int testInt;
 
             _user.LenientBilling = cbxLenientBilling.Checked;
+            _user.JailMode = cbxJailMode.Checked;
             if( int.TryParse( cbbCounties.SelectedValue.ToString(), out testInt ) )
             {
                 _user.HomeCountyId = testInt;
