@@ -68,13 +68,13 @@ namespace county.feecollections
             this.tabPagePreferences = new System.Windows.Forms.TabPage();
             this.gbModes = new System.Windows.Forms.GroupBox();
             this.cbxJailMode = new System.Windows.Forms.CheckBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbxLenientBilling = new System.Windows.Forms.CheckBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnSavePreferences = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.cbbCounties = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.cbxLenientBilling = new System.Windows.Forms.CheckBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnClose = new System.Windows.Forms.Button();
             this.folderBrowserDialog = new System.Windows.Forms.FolderBrowserDialog();
             this.tabOptions.SuspendLayout();
@@ -83,8 +83,8 @@ namespace county.feecollections
             this.grpMailMergeReportDir.SuspendLayout();
             this.tabPagePreferences.SuspendLayout();
             this.gbModes.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabOptions
@@ -306,6 +306,45 @@ namespace county.feecollections
             this.cbxJailMode.Text = "Jail Mode";
             this.cbxJailMode.UseVisualStyleBackColor = true;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.Color.LightGray;
+            this.groupBox1.Controls.Add(this.cbxLenientBilling);
+            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(0, 110);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(447, 71);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Lenient Billing";
+            // 
+            // cbxLenientBilling
+            // 
+            this.cbxLenientBilling.AutoSize = true;
+            this.cbxLenientBilling.Enabled = false;
+            this.cbxLenientBilling.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxLenientBilling.Location = new System.Drawing.Point(7, 50);
+            this.cbxLenientBilling.Name = "cbxLenientBilling";
+            this.cbxLenientBilling.Size = new System.Drawing.Size(91, 17);
+            this.cbxLenientBilling.TabIndex = 1;
+            this.cbxLenientBilling.Text = "Lenient Billing";
+            this.cbxLenientBilling.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.LightGray;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(7, 19);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(434, 35);
+            this.textBox1.TabIndex = 0;
+            this.textBox1.Text = "When checked, customers will only be marked as delinquent when their last payment" +
+    " was made over 30 days ago.";
+            // 
             // btnSavePreferences
             // 
             this.btnSavePreferences.Location = new System.Drawing.Point(376, 206);
@@ -347,48 +386,6 @@ namespace county.feecollections
             this.label1.TabIndex = 0;
             this.label1.Text = "Select County:";
             // 
-            // groupBox1
-            // 
-            this.groupBox1.BackColor = System.Drawing.Color.LightGray;
-            this.groupBox1.Controls.Add(this.cbxLenientBilling);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(0, 110);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(447, 71);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Lenient Billing";
-            this.groupBox1.Visible = false;
-            // 
-            // cbxLenientBilling
-            // 
-            this.cbxLenientBilling.AutoSize = true;
-            this.cbxLenientBilling.Checked = true;
-            this.cbxLenientBilling.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cbxLenientBilling.Enabled = false;
-            this.cbxLenientBilling.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbxLenientBilling.Location = new System.Drawing.Point(7, 50);
-            this.cbxLenientBilling.Name = "cbxLenientBilling";
-            this.cbxLenientBilling.Size = new System.Drawing.Size(91, 17);
-            this.cbxLenientBilling.TabIndex = 1;
-            this.cbxLenientBilling.Text = "Lenient Billing";
-            this.cbxLenientBilling.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.LightGray;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(7, 19);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(434, 35);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.Text = "When checked, customers will only be marked as delinquent when their last payment" +
-    " was made over 30 days ago.";
-            // 
             // btnClose
             // 
             this.btnClose.Location = new System.Drawing.Point(403, 288);
@@ -424,10 +421,10 @@ namespace county.feecollections
             this.tabPagePreferences.ResumeLayout(false);
             this.gbModes.ResumeLayout(false);
             this.gbModes.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
 
         }

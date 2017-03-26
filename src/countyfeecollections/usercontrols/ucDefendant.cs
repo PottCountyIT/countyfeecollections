@@ -106,7 +106,22 @@ namespace county.feecollections
             LocalUser user = new LocalUser();
             if (!user.JailMode)
             {
+                
+                if (!this.tabcontrolModeFields.TabPages.Contains(tabAttorneyPage))
+                {
+                    this.tabcontrolModeFields.TabPages.Add(tabAttorneyPage);
+                }
+                if (!this.tabcontrolModeFields.TabPages.Contains(tabBankruptcy))
+                {
+                    this.tabcontrolModeFields.TabPages.Add(tabBankruptcy);
+                }
+
                 this.tabcontrolModeFields.SelectedTab = this.tabAttorneyPage;
+
+                if (this.tabcontrolModeFields.TabPages.Contains(tabJailPage))
+                {
+                    this.tabcontrolModeFields.TabPages.Remove(tabJailPage);
+                }
                 //lblDaysInJail.Visible = false;
                 //tbDaysInJail.Visible = false;
                 //lblBookingNumber.Visible = false;
@@ -119,7 +134,21 @@ namespace county.feecollections
             }
             else
             {
+                if (!this.tabcontrolModeFields.TabPages.Contains(tabJailPage))
+                {
+                    this.tabcontrolModeFields.TabPages.Add(tabJailPage);
+                }
+
                 this.tabcontrolModeFields.SelectedTab = this.tabJailPage;
+
+                if (this.tabcontrolModeFields.TabPages.Contains(tabAttorneyPage))
+                {
+                    this.tabcontrolModeFields.TabPages.Remove(tabAttorneyPage);
+                }
+                if (this.tabcontrolModeFields.TabPages.Contains(tabBankruptcy))
+                {
+                    this.tabcontrolModeFields.TabPages.Remove(tabBankruptcy);
+                }
                 //lblDaysInJail.Visible = true;
                 //tbDaysInJail.Visible = true;
                 //lblBookingNumber.Visible = true;
@@ -154,5 +183,10 @@ namespace county.feecollections
 
         }
         #endregion
+
+        private void cbxInBankruptcy_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

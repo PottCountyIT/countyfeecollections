@@ -79,12 +79,19 @@ namespace county.feecollections
             this.txtFirstName = new System.Windows.Forms.TextBox();
             this.txtMiddleName = new System.Windows.Forms.TextBox();
             this.lblBirthdate = new System.Windows.Forms.Label();
-            this.tbJudgmentDate = new System.Windows.Forms.MaskedTextBox();
+            this.tabcontrolModeFields = new System.Windows.Forms.TabControl();
+            this.tabAttorneyPage = new System.Windows.Forms.TabPage();
+            this.mskBarredUntil = new System.Windows.Forms.MaskedTextBox();
+            this.chkHasProbationOfficer = new System.Windows.Forms.CheckBox();
+            this.lblBarredUntil = new System.Windows.Forms.Label();
+            this.txtProbationOfficer = new System.Windows.Forms.TextBox();
+            this.tabJailPage = new System.Windows.Forms.TabPage();
             this.tbBookingNumber = new System.Windows.Forms.TextBox();
+            this.tbJudgmentDate = new System.Windows.Forms.MaskedTextBox();
+            this.lblDaysInJail = new System.Windows.Forms.Label();
+            this.lblJudgmentDate = new System.Windows.Forms.Label();
             this.tbDaysInJail = new System.Windows.Forms.MaskedTextBox();
             this.lblBookingNumber = new System.Windows.Forms.Label();
-            this.lblJudgmentDate = new System.Windows.Forms.Label();
-            this.lblDaysInJail = new System.Windows.Forms.Label();
             this.dgvPlanSummary = new System.Windows.Forms.DataGridView();
             this.planname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CAPP = new System.Windows.Forms.DataGridViewCheckBoxColumn();
@@ -95,15 +102,17 @@ namespace county.feecollections
             this.Noncompliance = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.fileddate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bindingPlans = new System.Windows.Forms.BindingSource(this.components);
-            this.mskBarredUntil = new System.Windows.Forms.MaskedTextBox();
-            this.lblBarredUntil = new System.Windows.Forms.Label();
             this.lblEmployers = new System.Windows.Forms.Label();
             this.ucEmployer = new county.feecollections.ucEmployer();
-            this.txtProbationOfficer = new System.Windows.Forms.TextBox();
-            this.chkHasProbationOfficer = new System.Windows.Forms.CheckBox();
-            this.tabcontrolModeFields = new System.Windows.Forms.TabControl();
-            this.tabAttorneyPage = new System.Windows.Forms.TabPage();
-            this.tabJailPage = new System.Windows.Forms.TabPage();
+            this.cbxHasJudgmentFiled = new System.Windows.Forms.CheckBox();
+            this.tabBankruptcy = new System.Windows.Forms.TabPage();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
+            this.cbxInBankruptcy = new System.Windows.Forms.CheckBox();
+            this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
+            this.label3 = new System.Windows.Forms.Label();
             grpDefendnatInfo = new System.Windows.Forms.GroupBox();
             lblCellPhone = new System.Windows.Forms.Label();
             lblHomePhone = new System.Windows.Forms.Label();
@@ -121,11 +130,12 @@ namespace county.feecollections
             this.splitContainerDefendantDetail.Panel1.SuspendLayout();
             this.splitContainerDefendantDetail.Panel2.SuspendLayout();
             this.splitContainerDefendantDetail.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPlanSummary)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingPlans)).BeginInit();
             this.tabcontrolModeFields.SuspendLayout();
             this.tabAttorneyPage.SuspendLayout();
             this.tabJailPage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPlanSummary)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingPlans)).BeginInit();
+            this.tabBankruptcy.SuspendLayout();
             this.SuspendLayout();
             // 
             // grpDefendnatInfo
@@ -469,28 +479,141 @@ namespace county.feecollections
             lblAKA.TabIndex = 36;
             lblAKA.Text = "AKA:";
             // 
-            // tbJudgmentDate
+            // tabcontrolModeFields
             // 
-            this.tbJudgmentDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbJudgmentDate.Location = new System.Drawing.Point(83, 47);
-            this.tbJudgmentDate.Mask = "00/00/0000";
-            this.tbJudgmentDate.Name = "tbJudgmentDate";
-            this.tbJudgmentDate.Size = new System.Drawing.Size(80, 20);
-            this.tbJudgmentDate.TabIndex = 24;
+            this.tabcontrolModeFields.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
+            this.tabcontrolModeFields.Controls.Add(this.tabAttorneyPage);
+            this.tabcontrolModeFields.Controls.Add(this.tabJailPage);
+            this.tabcontrolModeFields.Controls.Add(this.tabBankruptcy);
+            this.tabcontrolModeFields.ItemSize = new System.Drawing.Size(80, 18);
+            this.tabcontrolModeFields.Location = new System.Drawing.Point(0, 144);
+            this.tabcontrolModeFields.Margin = new System.Windows.Forms.Padding(1);
+            this.tabcontrolModeFields.Name = "tabcontrolModeFields";
+            this.tabcontrolModeFields.Padding = new System.Drawing.Point(1, 1);
+            this.tabcontrolModeFields.SelectedIndex = 0;
+            this.tabcontrolModeFields.Size = new System.Drawing.Size(434, 90);
+            this.tabcontrolModeFields.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
+            this.tabcontrolModeFields.TabIndex = 25;
+            // 
+            // tabAttorneyPage
+            // 
+            this.tabAttorneyPage.Controls.Add(this.mskBarredUntil);
+            this.tabAttorneyPage.Controls.Add(this.chkHasProbationOfficer);
+            this.tabAttorneyPage.Controls.Add(this.lblBarredUntil);
+            this.tabAttorneyPage.Controls.Add(this.txtProbationOfficer);
+            this.tabAttorneyPage.Location = new System.Drawing.Point(4, 22);
+            this.tabAttorneyPage.Name = "tabAttorneyPage";
+            this.tabAttorneyPage.Padding = new System.Windows.Forms.Padding(3);
+            this.tabAttorneyPage.Size = new System.Drawing.Size(426, 64);
+            this.tabAttorneyPage.TabIndex = 0;
+            this.tabAttorneyPage.Text = "Basic";
+            this.tabAttorneyPage.UseVisualStyleBackColor = true;
+            // 
+            // mskBarredUntil
+            // 
+            this.mskBarredUntil.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mskBarredUntil.Location = new System.Drawing.Point(65, 6);
+            this.mskBarredUntil.Mask = "00/00/0000";
+            this.mskBarredUntil.Name = "mskBarredUntil";
+            this.mskBarredUntil.Size = new System.Drawing.Size(70, 20);
+            this.mskBarredUntil.TabIndex = 10;
+            this.mskBarredUntil.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.mskBarredUntil.ValidatingType = typeof(System.DateTime);
+            // 
+            // chkHasProbationOfficer
+            // 
+            this.chkHasProbationOfficer.AutoSize = true;
+            this.chkHasProbationOfficer.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkHasProbationOfficer.Location = new System.Drawing.Point(9, 32);
+            this.chkHasProbationOfficer.Name = "chkHasProbationOfficer";
+            this.chkHasProbationOfficer.Size = new System.Drawing.Size(108, 17);
+            this.chkHasProbationOfficer.TabIndex = 6;
+            this.chkHasProbationOfficer.Text = "Probation Officer:";
+            this.chkHasProbationOfficer.UseVisualStyleBackColor = true;
+            // 
+            // lblBarredUntil
+            // 
+            this.lblBarredUntil.AutoSize = true;
+            this.lblBarredUntil.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBarredUntil.Location = new System.Drawing.Point(6, 10);
+            this.lblBarredUntil.Name = "lblBarredUntil";
+            this.lblBarredUntil.Size = new System.Drawing.Size(65, 13);
+            this.lblBarredUntil.TabIndex = 14;
+            this.lblBarredUntil.Text = "Barred Until:";
+            // 
+            // txtProbationOfficer
+            // 
+            this.txtProbationOfficer.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtProbationOfficer.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtProbationOfficer.Location = new System.Drawing.Point(123, 30);
+            this.txtProbationOfficer.Name = "txtProbationOfficer";
+            this.txtProbationOfficer.Size = new System.Drawing.Size(329, 20);
+            this.txtProbationOfficer.TabIndex = 7;
+            // 
+            // tabJailPage
+            // 
+            this.tabJailPage.Controls.Add(this.maskedTextBox3);
+            this.tabJailPage.Controls.Add(this.label3);
+            this.tabJailPage.Controls.Add(this.cbxHasJudgmentFiled);
+            this.tabJailPage.Controls.Add(this.tbBookingNumber);
+            this.tabJailPage.Controls.Add(this.tbJudgmentDate);
+            this.tabJailPage.Controls.Add(this.lblDaysInJail);
+            this.tabJailPage.Controls.Add(this.lblJudgmentDate);
+            this.tabJailPage.Controls.Add(this.tbDaysInJail);
+            this.tabJailPage.Controls.Add(this.lblBookingNumber);
+            this.tabJailPage.Location = new System.Drawing.Point(4, 22);
+            this.tabJailPage.Name = "tabJailPage";
+            this.tabJailPage.Padding = new System.Windows.Forms.Padding(3);
+            this.tabJailPage.Size = new System.Drawing.Size(426, 64);
+            this.tabJailPage.TabIndex = 1;
+            this.tabJailPage.Text = "Jail";
+            this.tabJailPage.UseVisualStyleBackColor = true;
             // 
             // tbBookingNumber
             // 
             this.tbBookingNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbBookingNumber.Location = new System.Drawing.Point(64, 3);
+            this.tbBookingNumber.Location = new System.Drawing.Point(64, 0);
             this.tbBookingNumber.MaxLength = 10;
             this.tbBookingNumber.Name = "tbBookingNumber";
             this.tbBookingNumber.Size = new System.Drawing.Size(99, 20);
             this.tbBookingNumber.TabIndex = 23;
             // 
+            // tbJudgmentDate
+            // 
+            this.tbJudgmentDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbJudgmentDate.Location = new System.Drawing.Point(83, 44);
+            this.tbJudgmentDate.Mask = "00/00/0000";
+            this.tbJudgmentDate.Name = "tbJudgmentDate";
+            this.tbJudgmentDate.Size = new System.Drawing.Size(80, 20);
+            this.tbJudgmentDate.TabIndex = 24;
+            // 
+            // lblDaysInJail
+            // 
+            this.lblDaysInJail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblDaysInJail.AutoSize = true;
+            this.lblDaysInJail.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.lblDaysInJail.Location = new System.Drawing.Point(7, 25);
+            this.lblDaysInJail.Name = "lblDaysInJail";
+            this.lblDaysInJail.Size = new System.Drawing.Size(70, 13);
+            this.lblDaysInJail.TabIndex = 16;
+            this.lblDaysInJail.Text = "# Days in Jail";
+            // 
+            // lblJudgmentDate
+            // 
+            this.lblJudgmentDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblJudgmentDate.AutoSize = true;
+            this.lblJudgmentDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.lblJudgmentDate.Location = new System.Drawing.Point(7, 47);
+            this.lblJudgmentDate.Name = "lblJudgmentDate";
+            this.lblJudgmentDate.Size = new System.Drawing.Size(79, 13);
+            this.lblJudgmentDate.TabIndex = 17;
+            this.lblJudgmentDate.Text = "Judgment Date";
+            // 
             // tbDaysInJail
             // 
             this.tbDaysInJail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbDaysInJail.Location = new System.Drawing.Point(83, 26);
+            this.tbDaysInJail.Location = new System.Drawing.Point(83, 22);
             this.tbDaysInJail.Mask = "#####";
             this.tbDaysInJail.Name = "tbDaysInJail";
             this.tbDaysInJail.Size = new System.Drawing.Size(45, 20);
@@ -501,33 +624,11 @@ namespace county.feecollections
             this.lblBookingNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblBookingNumber.AutoSize = true;
             this.lblBookingNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.lblBookingNumber.Location = new System.Drawing.Point(7, 6);
+            this.lblBookingNumber.Location = new System.Drawing.Point(7, 2);
             this.lblBookingNumber.Name = "lblBookingNumber";
             this.lblBookingNumber.Size = new System.Drawing.Size(56, 13);
             this.lblBookingNumber.TabIndex = 18;
             this.lblBookingNumber.Text = "Booking #";
-            // 
-            // lblJudgmentDate
-            // 
-            this.lblJudgmentDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblJudgmentDate.AutoSize = true;
-            this.lblJudgmentDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.lblJudgmentDate.Location = new System.Drawing.Point(7, 50);
-            this.lblJudgmentDate.Name = "lblJudgmentDate";
-            this.lblJudgmentDate.Size = new System.Drawing.Size(79, 13);
-            this.lblJudgmentDate.TabIndex = 17;
-            this.lblJudgmentDate.Text = "Judgment Date";
-            // 
-            // lblDaysInJail
-            // 
-            this.lblDaysInJail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblDaysInJail.AutoSize = true;
-            this.lblDaysInJail.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.lblDaysInJail.Location = new System.Drawing.Point(7, 30);
-            this.lblDaysInJail.Name = "lblDaysInJail";
-            this.lblDaysInJail.Size = new System.Drawing.Size(70, 13);
-            this.lblDaysInJail.TabIndex = 16;
-            this.lblDaysInJail.Text = "# Days in Jail";
             // 
             // dgvPlanSummary
             // 
@@ -573,7 +674,7 @@ namespace county.feecollections
             this.dgvPlanSummary.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.SystemColors.Window;
             this.dgvPlanSummary.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.SystemColors.WindowText;
             this.dgvPlanSummary.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPlanSummary.Size = new System.Drawing.Size(438, 144);
+            this.dgvPlanSummary.Size = new System.Drawing.Size(441, 144);
             this.dgvPlanSummary.TabIndex = 15;
             // 
             // planname
@@ -652,27 +753,6 @@ namespace county.feecollections
             this.bindingPlans.AllowNew = false;
             this.bindingPlans.DataMember = "Plans";
             // 
-            // mskBarredUntil
-            // 
-            this.mskBarredUntil.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mskBarredUntil.Location = new System.Drawing.Point(65, 6);
-            this.mskBarredUntil.Mask = "00/00/0000";
-            this.mskBarredUntil.Name = "mskBarredUntil";
-            this.mskBarredUntil.Size = new System.Drawing.Size(70, 20);
-            this.mskBarredUntil.TabIndex = 10;
-            this.mskBarredUntil.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.mskBarredUntil.ValidatingType = typeof(System.DateTime);
-            // 
-            // lblBarredUntil
-            // 
-            this.lblBarredUntil.AutoSize = true;
-            this.lblBarredUntil.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBarredUntil.Location = new System.Drawing.Point(6, 10);
-            this.lblBarredUntil.Name = "lblBarredUntil";
-            this.lblBarredUntil.Size = new System.Drawing.Size(65, 13);
-            this.lblBarredUntil.TabIndex = 14;
-            this.lblBarredUntil.Text = "Barred Until:";
-            // 
             // lblEmployers
             // 
             this.lblEmployers.AutoSize = true;
@@ -688,77 +768,107 @@ namespace county.feecollections
             this.ucEmployer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.ucEmployer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ucEmployer.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ucEmployer.Location = new System.Drawing.Point(0, 237);
             this.ucEmployer.Name = "ucEmployer";
-            this.ucEmployer.Size = new System.Drawing.Size(435, 112);
+            this.ucEmployer.Size = new System.Drawing.Size(438, 112);
             this.ucEmployer.TabIndex = 12;
             // 
-            // txtProbationOfficer
+            // cbxHasJudgmentFiled
             // 
-            this.txtProbationOfficer.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtProbationOfficer.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtProbationOfficer.Location = new System.Drawing.Point(123, 30);
-            this.txtProbationOfficer.Name = "txtProbationOfficer";
-            this.txtProbationOfficer.Size = new System.Drawing.Size(329, 20);
-            this.txtProbationOfficer.TabIndex = 7;
+            this.cbxHasJudgmentFiled.AutoSize = true;
+            this.cbxHasJudgmentFiled.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxHasJudgmentFiled.Location = new System.Drawing.Point(223, 5);
+            this.cbxHasJudgmentFiled.Name = "cbxHasJudgmentFiled";
+            this.cbxHasJudgmentFiled.Size = new System.Drawing.Size(97, 17);
+            this.cbxHasJudgmentFiled.TabIndex = 25;
+            this.cbxHasJudgmentFiled.Text = "Judgment Filed";
+            this.cbxHasJudgmentFiled.UseVisualStyleBackColor = true;
             // 
-            // chkHasProbationOfficer
+            // tabBankruptcy
             // 
-            this.chkHasProbationOfficer.AutoSize = true;
-            this.chkHasProbationOfficer.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkHasProbationOfficer.Location = new System.Drawing.Point(9, 32);
-            this.chkHasProbationOfficer.Name = "chkHasProbationOfficer";
-            this.chkHasProbationOfficer.Size = new System.Drawing.Size(108, 17);
-            this.chkHasProbationOfficer.TabIndex = 6;
-            this.chkHasProbationOfficer.Text = "Probation Officer:";
-            this.chkHasProbationOfficer.UseVisualStyleBackColor = true;
+            this.tabBankruptcy.Controls.Add(this.cbxInBankruptcy);
+            this.tabBankruptcy.Controls.Add(this.maskedTextBox2);
+            this.tabBankruptcy.Controls.Add(this.maskedTextBox1);
+            this.tabBankruptcy.Controls.Add(this.label2);
+            this.tabBankruptcy.Controls.Add(this.label1);
+            this.tabBankruptcy.Location = new System.Drawing.Point(4, 22);
+            this.tabBankruptcy.Name = "tabBankruptcy";
+            this.tabBankruptcy.Size = new System.Drawing.Size(426, 64);
+            this.tabBankruptcy.TabIndex = 2;
+            this.tabBankruptcy.Text = "Bankruptcy";
+            this.tabBankruptcy.UseVisualStyleBackColor = true;
             // 
-            // tabcontrolModeFields
+            // label1
             // 
-            this.tabcontrolModeFields.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
-            this.tabcontrolModeFields.Controls.Add(this.tabAttorneyPage);
-            this.tabcontrolModeFields.Controls.Add(this.tabJailPage);
-            this.tabcontrolModeFields.ItemSize = new System.Drawing.Size(0, 1);
-            this.tabcontrolModeFields.Location = new System.Drawing.Point(0, 144);
-            this.tabcontrolModeFields.Margin = new System.Windows.Forms.Padding(1);
-            this.tabcontrolModeFields.Name = "tabcontrolModeFields";
-            this.tabcontrolModeFields.Padding = new System.Drawing.Point(1, 1);
-            this.tabcontrolModeFields.SelectedIndex = 0;
-            this.tabcontrolModeFields.Size = new System.Drawing.Size(434, 90);
-            this.tabcontrolModeFields.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
-            this.tabcontrolModeFields.TabIndex = 25;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(52, 19);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(55, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Date Filed";
             // 
-            // tabAttorneyPage
+            // label2
             // 
-            this.tabAttorneyPage.Controls.Add(this.mskBarredUntil);
-            this.tabAttorneyPage.Controls.Add(this.chkHasProbationOfficer);
-            this.tabAttorneyPage.Controls.Add(this.lblBarredUntil);
-            this.tabAttorneyPage.Controls.Add(this.txtProbationOfficer);
-            this.tabAttorneyPage.Location = new System.Drawing.Point(4, 5);
-            this.tabAttorneyPage.Name = "tabAttorneyPage";
-            this.tabAttorneyPage.Padding = new System.Windows.Forms.Padding(3);
-            this.tabAttorneyPage.Size = new System.Drawing.Size(426, 81);
-            this.tabAttorneyPage.TabIndex = 0;
-            this.tabAttorneyPage.Text = "tabPage1";
-            this.tabAttorneyPage.UseVisualStyleBackColor = true;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(52, 42);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(52, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "End Date";
             // 
-            // tabJailPage
+            // maskedTextBox1
             // 
-            this.tabJailPage.Controls.Add(this.tbBookingNumber);
-            this.tabJailPage.Controls.Add(this.tbJudgmentDate);
-            this.tabJailPage.Controls.Add(this.lblDaysInJail);
-            this.tabJailPage.Controls.Add(this.lblJudgmentDate);
-            this.tabJailPage.Controls.Add(this.tbDaysInJail);
-            this.tabJailPage.Controls.Add(this.lblBookingNumber);
-            this.tabJailPage.Location = new System.Drawing.Point(4, 5);
-            this.tabJailPage.Name = "tabJailPage";
-            this.tabJailPage.Padding = new System.Windows.Forms.Padding(3);
-            this.tabJailPage.Size = new System.Drawing.Size(426, 81);
-            this.tabJailPage.TabIndex = 1;
-            this.tabJailPage.Text = "tabPage2";
-            this.tabJailPage.UseVisualStyleBackColor = true;
+            this.maskedTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.maskedTextBox1.Location = new System.Drawing.Point(113, 39);
+            this.maskedTextBox1.Mask = "00/00/0000";
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(80, 20);
+            this.maskedTextBox1.TabIndex = 25;
+            // 
+            // maskedTextBox2
+            // 
+            this.maskedTextBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.maskedTextBox2.Location = new System.Drawing.Point(113, 16);
+            this.maskedTextBox2.Mask = "00/00/0000";
+            this.maskedTextBox2.Name = "maskedTextBox2";
+            this.maskedTextBox2.Size = new System.Drawing.Size(80, 20);
+            this.maskedTextBox2.TabIndex = 26;
+            // 
+            // cbxInBankruptcy
+            // 
+            this.cbxInBankruptcy.AutoSize = true;
+            this.cbxInBankruptcy.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxInBankruptcy.Location = new System.Drawing.Point(12, -1);
+            this.cbxInBankruptcy.Name = "cbxInBankruptcy";
+            this.cbxInBankruptcy.Size = new System.Drawing.Size(92, 17);
+            this.cbxInBankruptcy.TabIndex = 27;
+            this.cbxInBankruptcy.Text = "In Bankruptcy";
+            this.cbxInBankruptcy.UseVisualStyleBackColor = true;
+            this.cbxInBankruptcy.CheckedChanged += new System.EventHandler(this.cbxInBankruptcy_CheckedChanged);
+            // 
+            // maskedTextBox3
+            // 
+            this.maskedTextBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.maskedTextBox3.Location = new System.Drawing.Point(326, 22);
+            this.maskedTextBox3.Mask = "00/00/0000";
+            this.maskedTextBox3.Name = "maskedTextBox3";
+            this.maskedTextBox3.Size = new System.Drawing.Size(80, 20);
+            this.maskedTextBox3.TabIndex = 27;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.label3.Location = new System.Drawing.Point(220, 25);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(104, 13);
+            this.label3.TabIndex = 26;
+            this.label3.Text = "Judgment Filed Date";
             // 
             // ucDefendant
             // 
@@ -778,13 +888,15 @@ namespace county.feecollections
             this.splitContainerDefendantDetail.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerDefendantDetail)).EndInit();
             this.splitContainerDefendantDetail.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPlanSummary)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingPlans)).EndInit();
             this.tabcontrolModeFields.ResumeLayout(false);
             this.tabAttorneyPage.ResumeLayout(false);
             this.tabAttorneyPage.PerformLayout();
             this.tabJailPage.ResumeLayout(false);
             this.tabJailPage.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPlanSummary)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingPlans)).EndInit();
+            this.tabBankruptcy.ResumeLayout(false);
+            this.tabBankruptcy.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -832,5 +944,14 @@ namespace county.feecollections
         private System.Windows.Forms.TabControl tabcontrolModeFields;
         private System.Windows.Forms.TabPage tabAttorneyPage;
         private System.Windows.Forms.TabPage tabJailPage;
+        private System.Windows.Forms.CheckBox cbxHasJudgmentFiled;
+        private System.Windows.Forms.TabPage tabBankruptcy;
+        private System.Windows.Forms.CheckBox cbxInBankruptcy;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox3;
+        private System.Windows.Forms.Label label3;
     }
 }
