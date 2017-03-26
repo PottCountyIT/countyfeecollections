@@ -293,7 +293,7 @@ namespace county.feecollections
 
             string sql = (user.LenientBilling) ? "Report_AccountStatusLenientBilling" : "Report_AccountStatus";
 
-            using( SqlConnection con = DBSettings.NewSqlConnectionClosed )
+            using ( SqlConnection con = DBSettings.NewSqlConnectionClosed )
             using( SqlCommand cmd = new SqlCommand( sql, con ) )
             {
                 cmd.CommandType = CommandType.StoredProcedure;

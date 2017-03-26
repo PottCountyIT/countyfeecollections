@@ -97,7 +97,7 @@ namespace county.feecollections
                 + "defendant.phonehome, defendant.phonemobile, "
                 + "defendant.hasprobationofficer, defendant.probationofficer, "
                 + "defendant.barreduntil, defendant.notes, defendant.active, "
-                + "defendantemployers.daysinjail, defendantemployers.bookingnumber, defendantemployers.judgmentdate,"
+                + "defendant.daysinjail, defendant.bookingnumber, defendant.judgmentdate,"
                 + "defendantemployers.updatedby, defendantemployers.updateddate "
                 + "FROM Employer "
                 + "LEFT OUTER JOIN DefendantEmployers ON employer.employerid = defendantemployers.employerid "
