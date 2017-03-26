@@ -170,6 +170,11 @@ namespace county.feecollections
             }
 
             _user.SaveSettings();
+            frmMain main = this.Owner as frmMain;
+            if (null!=main)
+            {
+                main.SetJailMode();
+            }
             MyMessageBox.Show( this, "Preferences", MyDisplayMessage.SaveSuccess );
         } 
         #endregion

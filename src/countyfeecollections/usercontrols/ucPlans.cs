@@ -140,6 +140,13 @@ namespace county.feecollections
             ucPayments.Enabled = IsEnabled;
             cmbPlans.Enabled = IsEnabled;
 
+            SetJailMode();
+        }
+        #endregion
+
+        #region SetJailMode
+        public void SetJailMode()
+        {
             //Jail enhancements
             LocalUser user = new LocalUser();
             if (user.JailMode)
@@ -149,7 +156,8 @@ namespace county.feecollections
                 chkFiled.Visible = false;
                 chkNoncompliance.Visible = false;
                 chkInsurance.Visible = false;
-            } else
+            }
+            else
             {
                 chkCAPP.Visible = true;
                 chkNonCAPP.Visible = true;
@@ -157,11 +165,10 @@ namespace county.feecollections
                 chkNoncompliance.Visible = true;
                 chkInsurance.Visible = true;
             }
-        } 
-        #endregion
-
-        #region private void mnuPlan_Click( object sender, EventArgs e )
-        private void mnuPlan_Click( object sender, EventArgs e )
+        }
+            #endregion
+            #region private void mnuPlan_Click( object sender, EventArgs e )
+            private void mnuPlan_Click( object sender, EventArgs e )
         {
 
             /********************************************************************************

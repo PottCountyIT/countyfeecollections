@@ -469,7 +469,7 @@ namespace county.feecollections
             get { return _intDaysInJail; }
             set
             {
-                if (_intDaysInJail==value)
+                if (_intDaysInJail!=value)
                 {
                     _intDaysInJail = value;
                     base.MyState = MyObjectState.Modified;
@@ -484,7 +484,7 @@ namespace county.feecollections
             get { return _strBookingNumber; }
             set
             {
-                if (_strBookingNumber == value)
+                if (_strBookingNumber != value)
                 {
                     _strBookingNumber = value;
                     base.MyState = MyObjectState.Modified;

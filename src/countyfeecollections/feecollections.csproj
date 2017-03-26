@@ -284,6 +284,10 @@
       <DependentUpon>ucDefendant.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="usercontrols\ucDefendantOld.resx">
+      <DependentUpon>ucDefendantOld.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="usercontrols\ucEmployer.resx">
       <DependentUpon>ucEmployer.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -358,6 +362,12 @@
     </Compile>
     <Compile Include="usercontrols\ucDefendant.Designer.cs">
       <DependentUpon>ucDefendant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="usercontrols\ucDefendantOld.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="usercontrols\ucDefendantOld.Designer.cs">
+      <DependentUpon>ucDefendantOld.cs</DependentUpon>
     </Compile>
     <Compile Include="usercontrols\ucEmployer.cs">
       <SubType>UserControl</SubType>
@@ -556,6 +566,9 @@
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

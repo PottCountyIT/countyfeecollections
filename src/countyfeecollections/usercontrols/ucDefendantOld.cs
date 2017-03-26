@@ -28,14 +28,14 @@ using System.Windows.Forms;
 namespace county.feecollections
 {
 
-    public partial class ucDefendant : UserControl
+    public partial class ucDefendantOld : UserControl
     {
 
 
 
 
-        #region public ucDefendant()
-        public ucDefendant()
+        #region public ucDefendantOld()
+        public ucDefendantOld()
         {
             InitializeComponent();
 
@@ -44,7 +44,7 @@ namespace county.feecollections
                 ControlStyles.AllPaintingInWmPaint |
                 ControlStyles.OptimizedDoubleBuffer, true );
 
-            this.GotFocus += new EventHandler( ucDefendant_GotFocus );
+            this.GotFocus += new EventHandler( ucDefendantOld_GotFocus );
         } 
         #endregion
 
@@ -106,34 +106,32 @@ namespace county.feecollections
             LocalUser user = new LocalUser();
             if (!user.JailMode)
             {
-                this.tabcontrolModeFields.SelectedTab = this.tabAttorneyPage;
-                //lblDaysInJail.Visible = false;
-                //tbDaysInJail.Visible = false;
-                //lblBookingNumber.Visible = false;
-                //tbBookingNumber.Visible = false;
-                //lblJudgmentDate.Visible = false;
-                //tbJudgmentDate.Visible = false;
-                //chkHasProbationOfficer.Visible = true;
-                //txtProbationOfficer.Visible = true;
+                lblDaysInJail.Visible = false;
+                tbDaysInJail.Visible = false;
+                lblBookingNumber.Visible = false;
+                tbBookingNumber.Visible = false;
+                lblJudgmentDate.Visible = false;
+                tbJudgmentDate.Visible = false;
+                chkHasProbationOfficer.Visible = true;
+                txtProbationOfficer.Visible = true;
 
             }
             else
             {
-                this.tabcontrolModeFields.SelectedTab = this.tabJailPage;
-                //lblDaysInJail.Visible = true;
-                //tbDaysInJail.Visible = true;
-                //lblBookingNumber.Visible = true;
-                //tbBookingNumber.Visible = true;
-                //lblJudgmentDate.Visible = true;
-                //tbJudgmentDate.Visible = true;
-                //chkHasProbationOfficer.Visible = false;
-                //txtProbationOfficer.Visible = false;
+                lblDaysInJail.Visible = true;
+                tbDaysInJail.Visible = true;
+                lblBookingNumber.Visible = true;
+                tbBookingNumber.Visible = true;
+                lblJudgmentDate.Visible = true;
+                tbJudgmentDate.Visible = true;
+                chkHasProbationOfficer.Visible = false;
+                txtProbationOfficer.Visible = false;
             }
         }
         #endregion
 
-        #region private void ucDefendant_GotFocus( object sender, System.EventArgs e )
-        private void ucDefendant_GotFocus( object sender, System.EventArgs e )
+        #region private void ucDefendantOld_GotFocus( object sender, System.EventArgs e )
+        private void ucDefendantOld_GotFocus( object sender, System.EventArgs e )
         {
             this.txtFirstName.Focus();
             this.txtFirstName.Select( 0, 0 );

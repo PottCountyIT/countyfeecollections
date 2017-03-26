@@ -118,7 +118,7 @@ namespace county.feecollections.Properties {
             }
             set
             {
-                this["LenientBilling"] = value;
+                this["JailMode"] = value;
             }
         }
 
