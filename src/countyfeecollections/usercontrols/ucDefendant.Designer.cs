@@ -60,8 +60,8 @@ namespace county.feecollections
             System.Windows.Forms.Label lblMiddleName;
             System.Windows.Forms.Label lblDriversLicense;
             System.Windows.Forms.Label lblAKA;
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainerDefendantDetail = new System.Windows.Forms.SplitContainer();
             this.lblAddress = new System.Windows.Forms.Label();
             this.mskPhoneMobile = new System.Windows.Forms.MaskedTextBox();
@@ -108,10 +108,10 @@ namespace county.feecollections
             this.tabBankruptcy = new System.Windows.Forms.TabPage();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
+            this.tbBankruptcyEndDate = new System.Windows.Forms.MaskedTextBox();
+            this.tbBankruptcyDateFiled = new System.Windows.Forms.MaskedTextBox();
             this.cbxInBankruptcy = new System.Windows.Forms.CheckBox();
-            this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
+            this.tbJudgmentFiledDate = new System.Windows.Forms.MaskedTextBox();
             this.label3 = new System.Windows.Forms.Label();
             grpDefendnatInfo = new System.Windows.Forms.GroupBox();
             lblCellPhone = new System.Windows.Forms.Label();
@@ -516,7 +516,7 @@ namespace county.feecollections
             this.mskBarredUntil.Mask = "00/00/0000";
             this.mskBarredUntil.Name = "mskBarredUntil";
             this.mskBarredUntil.Size = new System.Drawing.Size(70, 20);
-            this.mskBarredUntil.TabIndex = 10;
+            this.mskBarredUntil.TabIndex = 16;
             this.mskBarredUntil.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.mskBarredUntil.ValidatingType = typeof(System.DateTime);
             // 
@@ -527,7 +527,7 @@ namespace county.feecollections
             this.chkHasProbationOfficer.Location = new System.Drawing.Point(9, 32);
             this.chkHasProbationOfficer.Name = "chkHasProbationOfficer";
             this.chkHasProbationOfficer.Size = new System.Drawing.Size(108, 17);
-            this.chkHasProbationOfficer.TabIndex = 6;
+            this.chkHasProbationOfficer.TabIndex = 20;
             this.chkHasProbationOfficer.Text = "Probation Officer:";
             this.chkHasProbationOfficer.UseVisualStyleBackColor = true;
             // 
@@ -549,11 +549,11 @@ namespace county.feecollections
             this.txtProbationOfficer.Location = new System.Drawing.Point(123, 30);
             this.txtProbationOfficer.Name = "txtProbationOfficer";
             this.txtProbationOfficer.Size = new System.Drawing.Size(329, 20);
-            this.txtProbationOfficer.TabIndex = 7;
+            this.txtProbationOfficer.TabIndex = 21;
             // 
             // tabJailPage
             // 
-            this.tabJailPage.Controls.Add(this.maskedTextBox3);
+            this.tabJailPage.Controls.Add(this.tbJudgmentFiledDate);
             this.tabJailPage.Controls.Add(this.label3);
             this.tabJailPage.Controls.Add(this.cbxHasJudgmentFiled);
             this.tabJailPage.Controls.Add(this.tbBookingNumber);
@@ -586,7 +586,7 @@ namespace county.feecollections
             this.tbJudgmentDate.Mask = "00/00/0000";
             this.tbJudgmentDate.Name = "tbJudgmentDate";
             this.tbJudgmentDate.Size = new System.Drawing.Size(80, 20);
-            this.tbJudgmentDate.TabIndex = 24;
+            this.tbJudgmentDate.TabIndex = 25;
             // 
             // lblDaysInJail
             // 
@@ -617,7 +617,7 @@ namespace county.feecollections
             this.tbDaysInJail.Mask = "#####";
             this.tbDaysInJail.Name = "tbDaysInJail";
             this.tbDaysInJail.Size = new System.Drawing.Size(45, 20);
-            this.tbDaysInJail.TabIndex = 22;
+            this.tbDaysInJail.TabIndex = 24;
             // 
             // lblBookingNumber
             // 
@@ -639,14 +639,14 @@ namespace county.feecollections
             this.dgvPlanSummary.AutoGenerateColumns = false;
             this.dgvPlanSummary.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvPlanSummary.BackgroundColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPlanSummary.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPlanSummary.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvPlanSummary.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.planname,
             this.CAPP,
@@ -661,14 +661,14 @@ namespace county.feecollections
             this.dgvPlanSummary.MultiSelect = false;
             this.dgvPlanSummary.Name = "dgvPlanSummary";
             this.dgvPlanSummary.ReadOnly = true;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPlanSummary.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPlanSummary.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvPlanSummary.RowHeadersVisible = false;
             this.dgvPlanSummary.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.SystemColors.WindowText;
             this.dgvPlanSummary.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.SystemColors.Window;
@@ -773,7 +773,7 @@ namespace county.feecollections
             this.ucEmployer.Location = new System.Drawing.Point(0, 237);
             this.ucEmployer.Name = "ucEmployer";
             this.ucEmployer.Size = new System.Drawing.Size(438, 112);
-            this.ucEmployer.TabIndex = 12;
+            this.ucEmployer.TabIndex = 40;
             // 
             // cbxHasJudgmentFiled
             // 
@@ -782,15 +782,15 @@ namespace county.feecollections
             this.cbxHasJudgmentFiled.Location = new System.Drawing.Point(223, 5);
             this.cbxHasJudgmentFiled.Name = "cbxHasJudgmentFiled";
             this.cbxHasJudgmentFiled.Size = new System.Drawing.Size(97, 17);
-            this.cbxHasJudgmentFiled.TabIndex = 25;
+            this.cbxHasJudgmentFiled.TabIndex = 26;
             this.cbxHasJudgmentFiled.Text = "Judgment Filed";
             this.cbxHasJudgmentFiled.UseVisualStyleBackColor = true;
             // 
             // tabBankruptcy
             // 
             this.tabBankruptcy.Controls.Add(this.cbxInBankruptcy);
-            this.tabBankruptcy.Controls.Add(this.maskedTextBox2);
-            this.tabBankruptcy.Controls.Add(this.maskedTextBox1);
+            this.tabBankruptcy.Controls.Add(this.tbBankruptcyDateFiled);
+            this.tabBankruptcy.Controls.Add(this.tbBankruptcyEndDate);
             this.tabBankruptcy.Controls.Add(this.label2);
             this.tabBankruptcy.Controls.Add(this.label1);
             this.tabBankruptcy.Location = new System.Drawing.Point(4, 22);
@@ -820,23 +820,24 @@ namespace county.feecollections
             this.label2.TabIndex = 1;
             this.label2.Text = "End Date";
             // 
-            // maskedTextBox1
+            // tbBankruptcyEndDate
             // 
-            this.maskedTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.maskedTextBox1.Location = new System.Drawing.Point(113, 39);
-            this.maskedTextBox1.Mask = "00/00/0000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(80, 20);
-            this.maskedTextBox1.TabIndex = 25;
+            this.tbBankruptcyEndDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbBankruptcyEndDate.Location = new System.Drawing.Point(113, 39);
+            this.tbBankruptcyEndDate.Mask = "00/00/0000";
+            this.tbBankruptcyEndDate.Name = "tbBankruptcyEndDate";
+            this.tbBankruptcyEndDate.Size = new System.Drawing.Size(80, 20);
+            this.tbBankruptcyEndDate.TabIndex = 32;
             // 
-            // maskedTextBox2
+            // tbBankruptcyDateFiled
             // 
-            this.maskedTextBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.maskedTextBox2.Location = new System.Drawing.Point(113, 16);
-            this.maskedTextBox2.Mask = "00/00/0000";
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(80, 20);
-            this.maskedTextBox2.TabIndex = 26;
+            this.tbBankruptcyDateFiled.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbBankruptcyDateFiled.Location = new System.Drawing.Point(113, 16);
+            this.tbBankruptcyDateFiled.Mask = "00/00/0000";
+            this.tbBankruptcyDateFiled.Name = "tbBankruptcyDateFiled";
+            this.tbBankruptcyDateFiled.Size = new System.Drawing.Size(80, 20);
+            this.tbBankruptcyDateFiled.TabIndex = 31;
+            this.tbBankruptcyDateFiled.Leave += new System.EventHandler(this.tbBankruptcyDateFiled_Leave);
             // 
             // cbxInBankruptcy
             // 
@@ -845,19 +846,19 @@ namespace county.feecollections
             this.cbxInBankruptcy.Location = new System.Drawing.Point(12, -1);
             this.cbxInBankruptcy.Name = "cbxInBankruptcy";
             this.cbxInBankruptcy.Size = new System.Drawing.Size(92, 17);
-            this.cbxInBankruptcy.TabIndex = 27;
+            this.cbxInBankruptcy.TabIndex = 30;
             this.cbxInBankruptcy.Text = "In Bankruptcy";
             this.cbxInBankruptcy.UseVisualStyleBackColor = true;
             this.cbxInBankruptcy.CheckedChanged += new System.EventHandler(this.cbxInBankruptcy_CheckedChanged);
             // 
-            // maskedTextBox3
+            // tbJudgmentFiledDate
             // 
-            this.maskedTextBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.maskedTextBox3.Location = new System.Drawing.Point(326, 22);
-            this.maskedTextBox3.Mask = "00/00/0000";
-            this.maskedTextBox3.Name = "maskedTextBox3";
-            this.maskedTextBox3.Size = new System.Drawing.Size(80, 20);
-            this.maskedTextBox3.TabIndex = 27;
+            this.tbJudgmentFiledDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbJudgmentFiledDate.Location = new System.Drawing.Point(326, 22);
+            this.tbJudgmentFiledDate.Mask = "00/00/0000";
+            this.tbJudgmentFiledDate.Name = "tbJudgmentFiledDate";
+            this.tbJudgmentFiledDate.Size = new System.Drawing.Size(80, 20);
+            this.tbJudgmentFiledDate.TabIndex = 27;
             // 
             // label3
             // 
@@ -947,11 +948,11 @@ namespace county.feecollections
         private System.Windows.Forms.CheckBox cbxHasJudgmentFiled;
         private System.Windows.Forms.TabPage tabBankruptcy;
         private System.Windows.Forms.CheckBox cbxInBankruptcy;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox tbBankruptcyDateFiled;
+        private System.Windows.Forms.MaskedTextBox tbBankruptcyEndDate;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox3;
+        private System.Windows.Forms.MaskedTextBox tbJudgmentFiledDate;
         private System.Windows.Forms.Label label3;
     }
 }

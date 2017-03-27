@@ -96,6 +96,13 @@ namespace county.feecollections
             this.tbDaysInJail.DataBindings.Add("Text", bindingDefendants, "DaysInJail", true, DataSourceUpdateMode.OnPropertyChanged);
             this.tbBookingNumber.DataBindings.Add("Text", bindingDefendants, "BookingNumber", true, DataSourceUpdateMode.OnPropertyChanged);
             this.tbJudgmentDate.DataBindings.Add("Text", bindingDefendants, "JudgmentDate", true, DataSourceUpdateMode.OnPropertyChanged, "", "MM/dd/yyyy");
+
+            this.cbxHasJudgmentFiled.DataBindings.Add("Checked", bindingDefendants, "HasJudgmentFiled", true, DataSourceUpdateMode.OnPropertyChanged);
+            this.tbJudgmentFiledDate.DataBindings.Add("Text", bindingDefendants, "JudgmentFiledDate", true, DataSourceUpdateMode.OnPropertyChanged, "", "MM/dd/yyyy");
+            this.cbxInBankruptcy.DataBindings.Add("Checked", bindingDefendants, "InBankruptcy", true, DataSourceUpdateMode.OnPropertyChanged);
+            this.tbBankruptcyDateFiled.DataBindings.Add("Text", bindingDefendants, "BankruptcyDateFiled", true, DataSourceUpdateMode.OnPropertyChanged, "", "MM/dd/yyyy");
+            this.tbBankruptcyEndDate.DataBindings.Add("Text", bindingDefendants, "BankruptcyEndDate", true, DataSourceUpdateMode.OnPropertyChanged, "", "MM/dd/yyyy");
+
             SetJailMode();
         }
         #endregion
@@ -187,6 +194,15 @@ namespace county.feecollections
         private void cbxInBankruptcy_CheckedChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void tbBankruptcyDateFiled_Leave(object sender, EventArgs e)
+        {
+            if (null== Helper.MaskedTextBoxDate(this.tbBankruptcyEndDate.Text) && null!= Helper.MaskedTextBoxDate(this.tbBankruptcyDateFiled.Text))
+            {
+                DateTime? tempdate = Helper.MaskedTextBoxDate(this.tbBankruptcyDateFiled.Text); 
+                this.tbBankruptcyEndDate.Text = Helper.FormatLongDateString( tempdate.Value.AddMonths(3)); 
+            }
         }
     }
 }

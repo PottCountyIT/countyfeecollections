@@ -55,6 +55,11 @@ namespace county.feecollections
         private int _intDaysInJail;
         private string _strBookingNumber;
         private DateTime? _dtJudgmentDate;
+        private bool _hasJudgmentFiled;
+        private DateTime? _dtJudgmentFiledDate;
+        private bool _inBankruptcy;
+        private DateTime? _dtBankruptcyDateFiled;
+        private DateTime? _dtBankruptcyEndDate;
 
         // public property backing objects
         private EmployersDefendant _Employers;
@@ -83,6 +88,11 @@ namespace county.feecollections
         private int _intDaysInJail_orig;
         private string _strBookingNumber_orig;
         private DateTime? _dtJudgmentDate_orig;
+        private bool _hasJudgmentFiled_orig;
+        private DateTime? _dtJudgmentFiledDate_orig;
+        private bool _inBakruptcy_orig;
+        private DateTime? _dtBankruptcyDateFiled_orig;
+        private DateTime? _dtBankruptcyEndDate_orig;
 
         private EmployersDefendant _Employers_orig;
         private Plans _Plans_orig;
@@ -113,7 +123,12 @@ namespace county.feecollections
                     _IsActive_orig == _IsActive &&
                     _intDaysInJail_orig == _intDaysInJail &&
                     _strBookingNumber_orig == _strBookingNumber &&
-                    _dtJudgmentDate_orig == _dtJudgmentDate)
+                    _dtJudgmentDate_orig == _dtJudgmentDate
+                    && _hasJudgmentFiled_orig == _hasJudgmentFiled
+                    && _dtJudgmentFiledDate_orig == _dtJudgmentFiledDate
+                    && _inBakruptcy_orig == _inBankruptcy
+                    && _dtBankruptcyDateFiled_orig == _dtBankruptcyDateFiled
+                    && _dtBankruptcyEndDate_orig == _dtBankruptcyEndDate)
                 {
                     return false;
                 }
@@ -512,6 +527,94 @@ namespace county.feecollections
         }
         #endregion
 
+        #region public bool HasJudgmentFiled
+        public bool HasJudgmentFiled
+        {
+            get { return _hasJudgmentFiled; }
+            set
+            {
+                if (!_hasJudgmentFiled.Equals(value))
+                {
+                    _hasJudgmentFiled = value;
+                    base.MyState = MyObjectState.Modified;
+                }
+            }
+        }
+        #endregion
+
+        #region public string JudgmentFiledDate
+        public string JudgmentFiledDate
+        {
+            get { return (_dtJudgmentFiledDate.HasValue) ? Helper.FormatLongDateString(_dtJudgmentFiledDate) : ""; }
+            set
+            {
+
+                DateTime? myValue = Helper.MaskedTextBoxDate(value);
+
+                if (!_dtJudgmentFiledDate.Equals(myValue))
+                {
+                    _dtJudgmentFiledDate = myValue;
+                    base.MyState = MyObjectState.Modified;
+                }
+
+            }
+        }
+        #endregion
+
+        #region public bool InBankruptcy
+        public bool InBankruptcy
+        {
+            get { return _inBankruptcy; }
+            set
+            {
+                if (!_inBankruptcy.Equals(value))
+                {
+                    _inBankruptcy = value;
+                    base.MyState = MyObjectState.Modified;
+                }
+            }
+        }
+        #endregion
+
+        #region public string BankruptcyDateFiled
+        public string BankruptcyDateFiled
+        {
+            get { return (_dtBankruptcyDateFiled.HasValue) ? Helper.FormatLongDateString(_dtBankruptcyDateFiled) : ""; }
+            set
+            {
+
+                DateTime? myValue = Helper.MaskedTextBoxDate(value);
+
+                if (!_dtBankruptcyDateFiled.Equals(myValue))
+                {
+                    _dtBankruptcyDateFiled = myValue;
+                    base.MyState = MyObjectState.Modified;
+                }
+
+            }
+        }
+        #endregion
+
+        #region public string BankruptcyEndDate
+        public string BankruptcyEndDate
+        {
+            get { return (_dtBankruptcyEndDate.HasValue) ? Helper.FormatLongDateString(_dtBankruptcyEndDate) : ""; }
+            set
+            {
+
+                DateTime? myValue = Helper.MaskedTextBoxDate(value);
+
+                if (!_dtBankruptcyEndDate.Equals(myValue))
+                {
+                    _dtBankruptcyEndDate = myValue;
+                    base.MyState = MyObjectState.Modified;
+                }
+
+            }
+        }
+        #endregion
+
+
 
         #region public Defendant() : base()
         public Defendant() : base()
@@ -544,7 +647,8 @@ namespace county.feecollections
                 const string sql = "SELECT firstname, middlename, lastname, aka, ssn, birthdate, driverslicense, "
                     + "street1, street2, city, stateid, zip, phonehome, phonemobile, "
                     + "hasprobationofficer, probationofficer, "
-                    + "barreduntil, notes, active, updatedby, updateddate, daysinjail, bookingnumber, judgmentdate "
+                    + "barreduntil, notes, active, updatedby, updateddate, daysinjail, bookingnumber, judgmentdate, "
+                    + "hasjudgmentfiled, judgmentfileddate, inbankruptcy, bankruptcydatefiled, banktupcyenddate "
                     + "FROM Defendant "
                     + "WHERE defendantid = @id; ";
 
@@ -581,6 +685,11 @@ namespace county.feecollections
                             _intDaysInJail = (dr.IsDBNull(dr.GetOrdinal("daysinjail"))) ? -1 : Convert.ToInt32(dr["daysinjail"].ToString());
                             _strBookingNumber = dr["bookingnumber"].ToString();
                             if (!dr.IsDBNull(dr.GetOrdinal("judgmentdate"))) _BarredUntilDate = (DateTime)dr["judgmentdate"];
+                            _hasJudgmentFiled = (dr.IsDBNull(dr.GetOrdinal("hasjudgmentfiled"))) ? false : Convert.ToBoolean(dr["hasjudgmentfiled"].ToString());
+                            if (!dr.IsDBNull(dr.GetOrdinal("judgmentfileddate"))) _dtJudgmentFiledDate = (DateTime)dr["judgmentfileddate"];
+                            _inBankruptcy = (dr.IsDBNull(dr.GetOrdinal("inbankruptcy"))) ? false : Convert.ToBoolean(dr["inbankruptcy"].ToString());
+                            if (!dr.IsDBNull(dr.GetOrdinal("bankruptcydatefiled"))) _dtBankruptcyDateFiled = (DateTime)dr["bankruptcydatefiled"];
+                            if (!dr.IsDBNull(dr.GetOrdinal("banktupcyenddate"))) _dtBankruptcyEndDate = (DateTime)dr["banktupcyenddate"];
                             base.SetNewUpdateProperties( dr["updatedby"].ToString(), (DateTime)dr["updateddate"] );
 
                         }
@@ -612,6 +721,7 @@ namespace county.feecollections
                 + "hasprobationofficer, probationofficer, "
                 + "barreduntil, notes, active, "
                 + "daysinjail, bookingnumber, judgmentdate, "
+                + "hasjudgmentfiled, judgmentfileddate, inbankruptcy, bankruptcydatefiled, banktupcyenddate, "
                 + "updatedby, updateddate "
                 + ") VALUES ( "
                 + "@firstname, @middlename, @lastname, @aka, @ssn, @birthdate, @driverslicense, "
@@ -619,6 +729,7 @@ namespace county.feecollections
                 + "@hasprobationofficer, @probationofficer, "
                 + "@barreduntil, @notes, 1, "
                 + "@daysinjail, @bookingnumber, @judgmentdate,"
+                + "@hasjudgmentfiled, @judgmentfileddate, @inbankruptcy, @bankruptcydatefiled, @banktupcyenddate, "
                 + "@updatedby, @updateddate "
                 + "); ";
 
@@ -669,6 +780,25 @@ namespace county.feecollections
                 else
                     cmd.Parameters.Add("@judgmentdate", SqlDbType.DateTime).Value = _dtJudgmentDate;
 
+                cmd.Parameters.Add("@hasjudgmentfiled", SqlDbType.Bit).Value = _hasJudgmentFiled;
+
+                if (_dtJudgmentFiledDate == null)
+                    cmd.Parameters.Add("@judgmentfileddate", SqlDbType.DateTime).Value = DBNull.Value;
+                else
+                    cmd.Parameters.Add("@judgmentfileddate", SqlDbType.DateTime).Value = _dtJudgmentFiledDate;
+
+                cmd.Parameters.Add("@inbankruptcy", SqlDbType.Bit).Value = _inBankruptcy;
+
+                if (_dtBankruptcyDateFiled == null)
+                    cmd.Parameters.Add("@bankruptcydatefiled", SqlDbType.DateTime).Value = DBNull.Value;
+                else
+                    cmd.Parameters.Add("@bankruptcydatefiled", SqlDbType.DateTime).Value = _dtBankruptcyDateFiled;
+
+                if (_dtBankruptcyEndDate == null)
+                    cmd.Parameters.Add("@banktupcyenddate", SqlDbType.DateTime).Value = DBNull.Value;
+                else
+                    cmd.Parameters.Add("@banktupcyenddate", SqlDbType.DateTime).Value = _dtBankruptcyEndDate;
+
                 base.Insert( cmd, updateDate );
             }
 
@@ -701,6 +831,11 @@ namespace county.feecollections
                 + "daysinjail = @daysinjail,"
                 + "bookingnumber = @bookingnumber,"
                 + "judgmentdate = @judgmentdate,"
+                + "hasjudgmentfiled = @hasjudgmentfiled,"
+                + "judgmentfileddate = @judgmentfileddate,"
+                + "inbankruptcy = @inbankruptcy,"
+                + "bankruptcydatefiled = @bankruptcydatefiled,"
+                + "banktupcyenddate = @banktupcyenddate,"
                 + "active = @active, "
                 + "updatedby = @updatedby, "
                 + "updateddate = @updateddate "
@@ -755,6 +890,25 @@ namespace county.feecollections
                     cmd.Parameters.Add("@judgmentdate", SqlDbType.DateTime).Value = DBNull.Value;
                 else
                     cmd.Parameters.Add("@judgmentdate", SqlDbType.DateTime).Value = _dtJudgmentDate;
+
+                cmd.Parameters.Add("@hasjudgmentfiled", SqlDbType.Bit).Value = _hasJudgmentFiled;
+
+                if (_dtJudgmentFiledDate == null)
+                    cmd.Parameters.Add("@judgmentfileddate", SqlDbType.DateTime).Value = DBNull.Value;
+                else
+                    cmd.Parameters.Add("@judgmentfileddate", SqlDbType.DateTime).Value = _dtJudgmentFiledDate;
+
+                cmd.Parameters.Add("@inbankruptcy", SqlDbType.Bit).Value = _inBankruptcy;
+
+                if (_dtBankruptcyDateFiled == null)
+                    cmd.Parameters.Add("@bankruptcydatefiled", SqlDbType.DateTime).Value = DBNull.Value;
+                else
+                    cmd.Parameters.Add("@bankruptcydatefiled", SqlDbType.DateTime).Value = _dtBankruptcyDateFiled;
+
+                if (_dtBankruptcyEndDate == null)
+                    cmd.Parameters.Add("@banktupcyenddate", SqlDbType.DateTime).Value = DBNull.Value;
+                else
+                    cmd.Parameters.Add("@banktupcyenddate", SqlDbType.DateTime).Value = _dtBankruptcyEndDate;
 
                 base.Update( cmd, updateDate );
 
@@ -966,6 +1120,13 @@ namespace county.feecollections
             _strBookingNumber_orig = _strBookingNumber = string.Empty;
             _dtJudgmentDate_orig = _dtJudgmentDate = null;
 
+            _hasJudgmentFiled_orig = _hasJudgmentFiled = false;
+            _dtJudgmentFiledDate_orig = _dtJudgmentFiledDate = null;
+            _inBakruptcy_orig = _inBankruptcy = false;
+            _dtBankruptcyDateFiled_orig = _dtBankruptcyDateFiled = null;
+            _dtBankruptcyEndDate_orig = _dtBankruptcyEndDate = null;
+
+
         } 
         #endregion
         
@@ -999,6 +1160,12 @@ namespace county.feecollections
             _intDaysInJail_orig = _intDaysInJail;
             _strBookingNumber_orig = _strBookingNumber;
             _dtJudgmentDate_orig = _dtJudgmentDate;
+
+            _hasJudgmentFiled_orig = _hasJudgmentFiled;
+            _dtJudgmentFiledDate_orig = _dtJudgmentFiledDate;
+            _inBakruptcy_orig = _inBankruptcy;
+            _dtBankruptcyDateFiled_orig = _dtBankruptcyDateFiled;
+            _dtBankruptcyEndDate_orig = _dtBankruptcyEndDate;
         }  
         #endregion
 
@@ -1032,6 +1199,12 @@ namespace county.feecollections
             _intDaysInJail = _intDaysInJail_orig;
             _strBookingNumber = _strBookingNumber_orig;
             _dtJudgmentDate = _dtJudgmentDate_orig;
+
+            _hasJudgmentFiled= _hasJudgmentFiled_orig;
+            _dtJudgmentFiledDate = _dtJudgmentFiledDate_orig;
+            _inBankruptcy = _inBakruptcy_orig;
+            _dtBankruptcyDateFiled = _dtBankruptcyDateFiled_orig;
+            _dtBankruptcyEndDate = _dtBankruptcyEndDate_orig;
         }  
         #endregion
 
@@ -1098,6 +1271,13 @@ namespace county.feecollections
                 defendant.DaysInJail = (dr.IsDBNull(dr.GetOrdinal("daysinjail"))) ? -1 : Convert.ToInt32(dr["daysinjail"].ToString());
                 defendant.BookingNumber = dr["bookingnumber"].ToString();
                 if (!dr.IsDBNull(dr.GetOrdinal("judgmentdate"))) defendant.JudgmentDate = dr["judgmentdate"].ToString();
+
+                defendant.HasJudgmentFiled = (dr.IsDBNull(dr.GetOrdinal("hasjudgmentfiled"))) ? false : Convert.ToBoolean(dr["hasjudgmentfiled"].ToString());
+                if (!dr.IsDBNull(dr.GetOrdinal("judgmentfileddate"))) defendant.JudgmentFiledDate = dr["judgmentfileddate"].ToString();
+                defendant.InBankruptcy = (dr.IsDBNull(dr.GetOrdinal("inbankruptcy"))) ? false : Convert.ToBoolean(dr["inbankruptcy"].ToString());
+                if (!dr.IsDBNull(dr.GetOrdinal("bankruptcydatefiled"))) defendant.BankruptcyDateFiled = dr["bankruptcydatefiled"].ToString();
+                if (!dr.IsDBNull(dr.GetOrdinal("banktupcyenddate"))) defendant.BankruptcyEndDate = dr["banktupcyenddate"].ToString();
+
                 defendant.Save( false );
 
                 defendant.RaiseChangedEvents = true;

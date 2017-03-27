@@ -149,28 +149,28 @@ namespace county.feecollections
             // mnuMainListsEmployers
             // 
             this.mnuMainListsEmployers.Name = "mnuMainListsEmployers";
-            this.mnuMainListsEmployers.Size = new System.Drawing.Size(228, 22);
+            this.mnuMainListsEmployers.Size = new System.Drawing.Size(227, 22);
             this.mnuMainListsEmployers.Text = "&Employers";
             this.mnuMainListsEmployers.Click += new System.EventHandler(this.mnuMain_Click);
             // 
             // mnuMainListsFeeTypes
             // 
             this.mnuMainListsFeeTypes.Name = "mnuMainListsFeeTypes";
-            this.mnuMainListsFeeTypes.Size = new System.Drawing.Size(228, 22);
+            this.mnuMainListsFeeTypes.Size = new System.Drawing.Size(227, 22);
             this.mnuMainListsFeeTypes.Text = "Fee Types";
             this.mnuMainListsFeeTypes.Click += new System.EventHandler(this.mnuMain_Click);
             // 
             // mnuMainListsPaymentArrangementTypes
             // 
             this.mnuMainListsPaymentArrangementTypes.Name = "mnuMainListsPaymentArrangementTypes";
-            this.mnuMainListsPaymentArrangementTypes.Size = new System.Drawing.Size(228, 22);
+            this.mnuMainListsPaymentArrangementTypes.Size = new System.Drawing.Size(227, 22);
             this.mnuMainListsPaymentArrangementTypes.Text = "Payment Arrangement Types";
             this.mnuMainListsPaymentArrangementTypes.Click += new System.EventHandler(this.mnuMain_Click);
             // 
             // mnuMainListsRestrictedCasePrefixes
             // 
             this.mnuMainListsRestrictedCasePrefixes.Name = "mnuMainListsRestrictedCasePrefixes";
-            this.mnuMainListsRestrictedCasePrefixes.Size = new System.Drawing.Size(228, 22);
+            this.mnuMainListsRestrictedCasePrefixes.Size = new System.Drawing.Size(227, 22);
             this.mnuMainListsRestrictedCasePrefixes.Text = "Restricted Case Prefixes";
             this.mnuMainListsRestrictedCasePrefixes.Click += new System.EventHandler(this.mnuMain_Click);
             // 
@@ -180,7 +180,7 @@ namespace county.feecollections
             this.mnuMainToolsOptions,
             this.mnuMainToolsOptionsPrintDelinquentLetters});
             this.mnuMainTools.Name = "mnuMainTools";
-            this.mnuMainTools.Size = new System.Drawing.Size(48, 20);
+            this.mnuMainTools.Size = new System.Drawing.Size(47, 20);
             this.mnuMainTools.Text = "&Tools";
             // 
             // mnuMainToolsOptions
@@ -234,7 +234,7 @@ namespace county.feecollections
             // mnuStatusWindowsUserName
             // 
             this.mnuStatusWindowsUserName.Name = "mnuStatusWindowsUserName";
-            this.mnuStatusWindowsUserName.Size = new System.Drawing.Size(883, 17);
+            this.mnuStatusWindowsUserName.Size = new System.Drawing.Size(884, 17);
             this.mnuStatusWindowsUserName.Spring = true;
             this.mnuStatusWindowsUserName.Text = "Windows Username";
             this.mnuStatusWindowsUserName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -242,7 +242,7 @@ namespace county.feecollections
             // mnuStatusVersion
             // 
             this.mnuStatusVersion.Name = "mnuStatusVersion";
-            this.mnuStatusVersion.Size = new System.Drawing.Size(110, 17);
+            this.mnuStatusVersion.Size = new System.Drawing.Size(109, 17);
             this.mnuStatusVersion.Text = "Application Version";
             // 
             // splitContainerMain
@@ -319,6 +319,7 @@ namespace county.feecollections
             this.ucDefendant.Name = "ucDefendant";
             this.ucDefendant.Size = new System.Drawing.Size(750, 370);
             this.ucDefendant.TabIndex = 19;
+            this.ucDefendant.Load += new System.EventHandler(this.ucDefendant_Load);
             // 
             // ucPlans
             // 

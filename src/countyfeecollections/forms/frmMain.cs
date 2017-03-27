@@ -975,5 +975,9 @@ namespace county.feecollections
             this.ucPlans.SetJailMode();
         }
 
+        private void ucDefendant_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
