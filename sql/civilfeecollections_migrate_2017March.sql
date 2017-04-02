@@ -9,5 +9,5 @@ hasjudgmentfiled bit NULL,
 judgmentfileddate datetime NULL,
 inbankruptcy bit null,
 bankruptcydatefiled datetime NULL,
-banktupcyenddate datetime NULL;
+bankruptcyenddate datetime NULL;
 GO

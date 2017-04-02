@@ -26,7 +26,7 @@ BEGIN
 	-- SET NOCOUNT ON added to prevent extra result sets from interfering with SELECT statements.
 	SET NOCOUNT ON;
 
-	UPDATE Defendant SET inbankruptcy=0 WHERE inbankruptcy=1 and banktupcyenddate<CURRENT_TIMESTAMP;
+	UPDATE Defendant SET inbankruptcy=0 WHERE inbankruptcy=1 and bankruptcyenddate<CURRENT_TIMESTAMP;
 
 
 
@@ -104,7 +104,7 @@ BEGIN
 										   GROUP BY defendantid, planid
 										     HAVING SUM(total) = 0
 										     )
-							 AND (inbankruptcy=0 OR banktupcyenddate<CURRENT_TIMESTAMP)
+							 AND (inbankruptcy=0 OR bankruptcyenddate<CURRENT_TIMESTAMP)
                      GROUP BY Defendant.defendantid, lastname, firstname, DefendantPlans.planid, planname, LastPayment.receiveddate, PlanPaymentArrangement.startdate, PlanPaymentArrangement.amount, street1, street2, city, States.abbreviation, zip, DefendantPlans.noncompliancenotice
 				       ) AS a    
               GROUP BY a.defendantid, a.lastname, a.firstname, a.planid, a.planname, a.[Last Payment Date], a.[Last Payment Amount], a.street1, a.street2, a.city, a.stateAbbr, a.zip, Noncompliance

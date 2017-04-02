@@ -513,7 +513,7 @@ namespace county.feecollections
 
 + "	  			   ) AS plan_remaining_balance, "
 + "                payperiodtype, paymentarrangementtype, PlanPaymentArrangement.amount as payment_arrangement_amount, "
-+ "                startdate, enddate, daysinjail, bookingnumber, judgmentdate, judgmentfileddate, bankruptcydatefiled, banktupcyenddate "
++ "                startdate, enddate, daysinjail, bookingnumber, judgmentdate, judgmentfileddate, bankruptcydatefiled, bankruptcyenddate "
 + "           FROM Defendant "
 + "LEFT OUTER JOIN States a ON Defendant.stateid = a.stateid "
 + "LEFT OUTER JOIN DefendantEmployers ON Defendant.defendantid = DefendantEmployers.defendantid AND SeparationDate IS NULL "
@@ -818,7 +818,7 @@ namespace county.feecollections
             {
                 wrdTable.Cell(2, 62).Range.InsertAfter(tempDate.ToString("d"));
             }
-            if (DateTime.TryParse(ds.Tables["General"].Rows[0]["banktupcyenddate"].ToString(), out tempDate))
+            if (DateTime.TryParse(ds.Tables["General"].Rows[0]["bankruptcyenddate"].ToString(), out tempDate))
             {
                 wrdTable.Cell(2, 63).Range.InsertAfter(tempDate.ToString("d"));
             }

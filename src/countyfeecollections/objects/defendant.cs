@@ -648,7 +648,7 @@ namespace county.feecollections
                     + "street1, street2, city, stateid, zip, phonehome, phonemobile, "
                     + "hasprobationofficer, probationofficer, "
                     + "barreduntil, notes, active, updatedby, updateddate, daysinjail, bookingnumber, judgmentdate, "
-                    + "hasjudgmentfiled, judgmentfileddate, inbankruptcy, bankruptcydatefiled, banktupcyenddate "
+                    + "hasjudgmentfiled, judgmentfileddate, inbankruptcy, bankruptcydatefiled, bankruptcyenddate "
                     + "FROM Defendant "
                     + "WHERE defendantid = @id; ";
 
@@ -689,7 +689,7 @@ namespace county.feecollections
                             if (!dr.IsDBNull(dr.GetOrdinal("judgmentfileddate"))) _dtJudgmentFiledDate = (DateTime)dr["judgmentfileddate"];
                             _inBankruptcy = (dr.IsDBNull(dr.GetOrdinal("inbankruptcy"))) ? false : Convert.ToBoolean(dr["inbankruptcy"].ToString());
                             if (!dr.IsDBNull(dr.GetOrdinal("bankruptcydatefiled"))) _dtBankruptcyDateFiled = (DateTime)dr["bankruptcydatefiled"];
-                            if (!dr.IsDBNull(dr.GetOrdinal("banktupcyenddate"))) _dtBankruptcyEndDate = (DateTime)dr["banktupcyenddate"];
+                            if (!dr.IsDBNull(dr.GetOrdinal("bankruptcyenddate"))) _dtBankruptcyEndDate = (DateTime)dr["bankruptcyenddate"];
                             base.SetNewUpdateProperties( dr["updatedby"].ToString(), (DateTime)dr["updateddate"] );
 
                         }
@@ -721,7 +721,7 @@ namespace county.feecollections
                 + "hasprobationofficer, probationofficer, "
                 + "barreduntil, notes, active, "
                 + "daysinjail, bookingnumber, judgmentdate, "
-                + "hasjudgmentfiled, judgmentfileddate, inbankruptcy, bankruptcydatefiled, banktupcyenddate, "
+                + "hasjudgmentfiled, judgmentfileddate, inbankruptcy, bankruptcydatefiled, bankruptcyenddate, "
                 + "updatedby, updateddate "
                 + ") VALUES ( "
                 + "@firstname, @middlename, @lastname, @aka, @ssn, @birthdate, @driverslicense, "
@@ -729,7 +729,7 @@ namespace county.feecollections
                 + "@hasprobationofficer, @probationofficer, "
                 + "@barreduntil, @notes, 1, "
                 + "@daysinjail, @bookingnumber, @judgmentdate,"
-                + "@hasjudgmentfiled, @judgmentfileddate, @inbankruptcy, @bankruptcydatefiled, @banktupcyenddate, "
+                + "@hasjudgmentfiled, @judgmentfileddate, @inbankruptcy, @bankruptcydatefiled, @bankruptcyenddate, "
                 + "@updatedby, @updateddate "
                 + "); ";
 
@@ -795,9 +795,9 @@ namespace county.feecollections
                     cmd.Parameters.Add("@bankruptcydatefiled", SqlDbType.DateTime).Value = _dtBankruptcyDateFiled;
 
                 if (_dtBankruptcyEndDate == null)
-                    cmd.Parameters.Add("@banktupcyenddate", SqlDbType.DateTime).Value = DBNull.Value;
+                    cmd.Parameters.Add("@bankruptcyenddate", SqlDbType.DateTime).Value = DBNull.Value;
                 else
-                    cmd.Parameters.Add("@banktupcyenddate", SqlDbType.DateTime).Value = _dtBankruptcyEndDate;
+                    cmd.Parameters.Add("@bankruptcyenddate", SqlDbType.DateTime).Value = _dtBankruptcyEndDate;
 
                 base.Insert( cmd, updateDate );
             }
@@ -835,7 +835,7 @@ namespace county.feecollections
                 + "judgmentfileddate = @judgmentfileddate,"
                 + "inbankruptcy = @inbankruptcy,"
                 + "bankruptcydatefiled = @bankruptcydatefiled,"
-                + "banktupcyenddate = @banktupcyenddate,"
+                + "bankruptcyenddate = @bankruptcyenddate,"
                 + "active = @active, "
                 + "updatedby = @updatedby, "
                 + "updateddate = @updateddate "
@@ -906,9 +906,9 @@ namespace county.feecollections
                     cmd.Parameters.Add("@bankruptcydatefiled", SqlDbType.DateTime).Value = _dtBankruptcyDateFiled;
 
                 if (_dtBankruptcyEndDate == null)
-                    cmd.Parameters.Add("@banktupcyenddate", SqlDbType.DateTime).Value = DBNull.Value;
+                    cmd.Parameters.Add("@bankruptcyenddate", SqlDbType.DateTime).Value = DBNull.Value;
                 else
-                    cmd.Parameters.Add("@banktupcyenddate", SqlDbType.DateTime).Value = _dtBankruptcyEndDate;
+                    cmd.Parameters.Add("@bankruptcyenddate", SqlDbType.DateTime).Value = _dtBankruptcyEndDate;
 
                 base.Update( cmd, updateDate );
 
@@ -1276,7 +1276,7 @@ namespace county.feecollections
                 if (!dr.IsDBNull(dr.GetOrdinal("judgmentfileddate"))) defendant.JudgmentFiledDate = dr["judgmentfileddate"].ToString();
                 defendant.InBankruptcy = (dr.IsDBNull(dr.GetOrdinal("inbankruptcy"))) ? false : Convert.ToBoolean(dr["inbankruptcy"].ToString());
                 if (!dr.IsDBNull(dr.GetOrdinal("bankruptcydatefiled"))) defendant.BankruptcyDateFiled = dr["bankruptcydatefiled"].ToString();
-                if (!dr.IsDBNull(dr.GetOrdinal("banktupcyenddate"))) defendant.BankruptcyEndDate = dr["banktupcyenddate"].ToString();
+                if (!dr.IsDBNull(dr.GetOrdinal("bankruptcyenddate"))) defendant.BankruptcyEndDate = dr["bankruptcyenddate"].ToString();
 
                 defendant.Save( false );
 
