@@ -201,7 +201,7 @@ namespace county.feecollections
             if (null== Helper.MaskedTextBoxDate(this.tbBankruptcyEndDate.Text) && null!= Helper.MaskedTextBoxDate(this.tbBankruptcyDateFiled.Text))
             {
                 DateTime? tempdate = Helper.MaskedTextBoxDate(this.tbBankruptcyDateFiled.Text); 
-                this.tbBankruptcyEndDate.Text = Helper.FormatLongDateString( tempdate.Value.AddMonths(3)); 
+                this.tbBankruptcyEndDate.Text = Helper.FormatLongDateString( tempdate.Value.AddDays(90)); 
             }
         }
     }

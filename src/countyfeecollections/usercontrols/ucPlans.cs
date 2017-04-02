@@ -189,6 +189,10 @@ namespace county.feecollections
 
                         Plan plan = new Plan( ((Defendant)((BindingSource)bindingPlans.DataSource).Current).ID );
                         plan.PlanName = frm.PlanName;
+                        if (plan.PlanName.StartsWith("OWMG"))
+                        {
+                            plan.CAPP = true;
+                        }
 
                         ((Plan)bindingPlans[bindingPlans.Add( plan )]).MyState = MyObjectState.New;
 
