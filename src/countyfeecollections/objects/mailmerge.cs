@@ -63,10 +63,10 @@ namespace county.feecollections
             trv.Nodes.Add( "Probation Officer" );
             trv.Nodes.Add("Days In Jail");
             trv.Nodes.Add("Booking Number");
-            trv.Nodes.Add("Has Judgment Filed");
+            //trv.Nodes.Add("Has Judgment Filed");
             trv.Nodes.Add("Date Of Judgment");
             trv.Nodes.Add("Judgment Filed Date");
-            trv.Nodes.Add("In Bankruptcy");
+            //trv.Nodes.Add("In Bankruptcy");
             trv.Nodes.Add("Bankruptcy Date Filed");
             trv.Nodes.Add("Bankruptcy End Date");
 
@@ -409,7 +409,7 @@ namespace county.feecollections
         private static Table CreateDataSource( Document wordDoc, Selection wordSel )
         {
             // creating table to store merge field data.
-            Table wrdTable = wordDoc.Tables.Add( wordSel.Range, 2, 57, ref _objMissing, ref _objMissing );
+            Table wrdTable = wordDoc.Tables.Add( wordSel.Range, 2, 63, ref _objMissing, ref _objMissing );
 
             wrdTable.Cell( 1, 1 ).Range.InsertAfter( "First_Name" );
             wrdTable.Cell( 1, 2 ).Range.InsertAfter( "Middle_Name" );
@@ -473,12 +473,12 @@ namespace county.feecollections
 
             wrdTable.Cell(1, 58).Range.InsertAfter("Days_In_Jail");
             wrdTable.Cell(1, 59).Range.InsertAfter("Booking_Number");
-            wrdTable.Cell(1, 60).Range.InsertAfter("Has_Judgment_Filed");
-            wrdTable.Cell(1, 61).Range.InsertAfter("Date_Of_Judgment");
-            wrdTable.Cell(1, 62).Range.InsertAfter("Judgment_Filed_Date");
-            wrdTable.Cell(1, 63).Range.InsertAfter("In_Bankruptcy");
-            wrdTable.Cell(1, 64).Range.InsertAfter("Bankruptcy_Date_Filed");
-            wrdTable.Cell(1, 65).Range.InsertAfter("Bankruptcy_End_Date");
+            //wrdTable.Cell(1, 60).Range.InsertAfter("Has_Judgment_Filed");
+            wrdTable.Cell(1, 60).Range.InsertAfter("Date_Of_Judgment");
+            wrdTable.Cell(1, 61).Range.InsertAfter("Judgment_Filed_Date");
+            //wrdTable.Cell(1, 63).Range.InsertAfter("In_Bankruptcy");
+            wrdTable.Cell(1, 62).Range.InsertAfter("Bankruptcy_Date_Filed");
+            wrdTable.Cell(1, 63).Range.InsertAfter("Bankruptcy_End_Date");
 
             wordDoc.Save();
             return wrdTable;
@@ -513,7 +513,7 @@ namespace county.feecollections
 
 + "	  			   ) AS plan_remaining_balance, "
 + "                payperiodtype, paymentarrangementtype, PlanPaymentArrangement.amount as payment_arrangement_amount, "
-+ "                startdate, enddate, daysinjail, bookingnumber, judgmentdate, hasjudgmentfiled, judgmentfileddate, inbankruptcy, bankrupctdatefiled, bankruptcyenddate "
++ "                startdate, enddate, daysinjail, bookingnumber, judgmentdate, judgmentfileddate, bankruptcydatefiled, banktupcyenddate "
 + "           FROM Defendant "
 + "LEFT OUTER JOIN States a ON Defendant.stateid = a.stateid "
 + "LEFT OUTER JOIN DefendantEmployers ON Defendant.defendantid = DefendantEmployers.defendantid AND SeparationDate IS NULL "
@@ -808,19 +808,19 @@ namespace county.feecollections
             {
                 wrdTable.Cell(2, 60).Range.InsertAfter(tempDate.ToString("d"));
             }
-            wrdTable.Cell(2, 61).Range.InsertAfter(ds.Tables["General"].Rows[0]["hasjudgmentfiled"].ToString());
+            //wrdTable.Cell(2, 61).Range.InsertAfter(ds.Tables["General"].Rows[0]["hasjudgmentfiled"].ToString());
             if (DateTime.TryParse(ds.Tables["General"].Rows[0]["judgmentfileddate"].ToString(), out tempDate))
+            {
+                wrdTable.Cell(2, 61).Range.InsertAfter(tempDate.ToString("d"));
+            }
+            //wrdTable.Cell(2, 63).Range.InsertAfter(ds.Tables["General"].Rows[0]["inbankruptcy"].ToString());
+            if (DateTime.TryParse(ds.Tables["General"].Rows[0]["bankruptcydatefiled"].ToString(), out tempDate))
             {
                 wrdTable.Cell(2, 62).Range.InsertAfter(tempDate.ToString("d"));
             }
-            wrdTable.Cell(2, 63).Range.InsertAfter(ds.Tables["General"].Rows[0]["inbankruptcy"].ToString());
-            if (DateTime.TryParse(ds.Tables["General"].Rows[0]["bankruptcydatefiled"].ToString(), out tempDate))
-            {
-                wrdTable.Cell(2, 64).Range.InsertAfter(tempDate.ToString("d"));
-            }
             if (DateTime.TryParse(ds.Tables["General"].Rows[0]["banktupcyenddate"].ToString(), out tempDate))
             {
-                wrdTable.Cell(2, 65).Range.InsertAfter(tempDate.ToString("d"));
+                wrdTable.Cell(2, 63).Range.InsertAfter(tempDate.ToString("d"));
             }
 
 
@@ -948,12 +948,12 @@ namespace county.feecollections
 
             wrdTable.Cell(2, 58).Range.InsertAfter("Days_In_Jail");
             wrdTable.Cell(2, 59).Range.InsertAfter("Booking_Number");
-            wrdTable.Cell(2, 60).Range.InsertAfter("Has_Judgment_Filed");
-            wrdTable.Cell(2, 61).Range.InsertAfter("Date_Of_Judgment");
-            wrdTable.Cell(2, 62).Range.InsertAfter("Judgment_Filed_Date");
-            wrdTable.Cell(2, 63).Range.InsertAfter("In_Bankruptcy");
-            wrdTable.Cell(2, 64).Range.InsertAfter("Bankruptcy_Date_Filed");
-            wrdTable.Cell(2, 65).Range.InsertAfter("Bankruptcy_End_Date");
+            //wrdTable.Cell(2, 60).Range.InsertAfter("Has_Judgment_Filed");
+            wrdTable.Cell(2, 60).Range.InsertAfter("Date_Of_Judgment");
+            wrdTable.Cell(2, 61).Range.InsertAfter("Judgment_Filed_Date");
+            //wrdTable.Cell(2, 63).Range.InsertAfter("In_Bankruptcy");
+            wrdTable.Cell(2, 62).Range.InsertAfter("Bankruptcy_Date_Filed");
+            wrdTable.Cell(2, 63).Range.InsertAfter("Bankruptcy_End_Date");
 
         }
     }
