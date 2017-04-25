@@ -99,7 +99,7 @@ namespace county.feecollections
                 + "defendant.hasprobationofficer, defendant.probationofficer, "
                 + "defendant.barreduntil, defendant.notes, defendant.active, "
                 + "defendant.daysinjail, defendant.bookingnumber, defendant.judgmentdate,"
-                + "defendant.hasjudgmentfiled, defendant.judgmentfileddate, defendant.inbankruptcy, defendant.bankruptcydatefiled, defendant.bankruptcyenddate "
+                + "defendant.hasjudgmentfiled, defendant.judgmentfileddate, defendant.inbankruptcy, defendant.bankruptcydatefiled, defendant.bankruptcyenddate, "
                 + "defendantemployers.updatedby, defendantemployers.updateddate "
                 + "FROM Employer "
                 + "LEFT OUTER JOIN DefendantEmployers ON employer.employerid = defendantemployers.employerid "

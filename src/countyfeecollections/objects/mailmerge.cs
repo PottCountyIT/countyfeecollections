@@ -78,7 +78,7 @@ namespace county.feecollections
             node.Nodes.Add( "Employer City" );
             node.Nodes.Add( "Employer State" );
             node.Nodes.Add( "Employer Zip" );
-            node.Nodes.Add( "Employer Phone" );
+            // node.Nodes.Add( "Employer Phone" ); <-- commented out to make from for Jail Admin cost and Jail Medical, see also CAPP
             trv.Nodes.Add( node );
             
             // node plan
@@ -108,7 +108,7 @@ namespace county.feecollections
             node.Nodes.Add( "CAPP Case Name" );
             node.Nodes.Add( "CAPP Case County" );
             node.Nodes.Add( "CAPP Case CAPP" );
-            node.Nodes.Add( "CAPP Case Committed" );
+            // node.Nodes.Add( "CAPP Case Committed" ); commented out to make room for "Jail Admin cost" and "Jail Medical"
             planNode.Nodes.Add( node );
 
             // node cases
@@ -126,6 +126,8 @@ namespace county.feecollections
             feeNode.Nodes.Add("Restitution");
             feeNode.Nodes.Add("Court Fines");
             feeNode.Nodes.Add("Jail Room And Board");
+            feeNode.Nodes.Add("Jail Admin cost");
+            feeNode.Nodes.Add("Jail Medical");
 
             // node fee type
             node = new TreeNode( "Fee Type" );
