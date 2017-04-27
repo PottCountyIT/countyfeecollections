@@ -58,7 +58,19 @@ namespace county.feecollections
                 Properties.Settings.Default.LenientBilling = value;
                 _isDirty = true;
             }
-        } 
+        }
+        #endregion
+
+        #region public bool JailMode
+        public bool JailMode
+        {
+            get { return Properties.Settings.Default.JailMode; }
+            set
+            {
+                Properties.Settings.Default.JailMode = value;
+                _isDirty = true;
+            }
+        }
         #endregion
 
         #region public int HomeCountyId

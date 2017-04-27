@@ -132,24 +132,24 @@
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="mnuDefendantNew.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAU1JREFUOE+lk7FL
-        QlEUxu+/IDi4ODk5COIgLqKgCIIICoqDi4uTi9OD0EBCsKkhiIZoiYIiCCIoKHrQ4tLU0uRiQ0PQv/B1
-        zuF6L/c+l2r4vfPxfed8w+M9BeBfyKPz2NlGSEDDOrJjCtoPbbX4XjiQB5qC1n5uC5p3TTX/mjuQB5qC
-        1n5uC+o3dTX7nDmQB5qC1n5uCyqXFTVZTxzIA01Baz+3BcWzYli+KKN2XUPjtoHWfQvdpy6CVSCwZo8z
-        3uFdvjEF+ZO8eWEbph9TjN/HAms/5xtTkD3KYvQ2+hV8YwrSB+kwc5hB7jiHwmkBpfMSqldVDF+HAmv2
-        OOMd3uUbU5DaT6nBcuBAHmgKWvu53MojuZdU/Ze+A3mgKWjt57YgsZtQveeeA3mgKWjt57YgvhOPfOfk
-        bf4DaO3ntiAWxLYREtCwjuyYgr8D9QOMyCWDHmRoDwAAAABJRU5ErkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABTUlEQVQ4T6WTsUtCURTG778gOLg4OTkI
+        4iAuoqAIgggKioOLi5OL04PQQEKwqSGIhmiJgiIIIigoetDi0tTS5GJDQ9C/8HXO4Xov9z6Xavi98/F9
+        53zD4z0F4F/Io/PY2UZIQMM6smMK2g9ttfheOJAHmoLWfm4LmndNNf+aO5AHmoLWfm4L6jd1NfucOZAH
+        moLWfm4LKpcVNVlPHMgDTUFrP7cFxbNiWL4oo3ZdQ+O2gdZ9C92nLoJVILBmjzPe4V2+MQX5k7x5YRum
+        H1OM38cCaz/nG1OQPcpi9Db6FXxjCtIH6TBzmEHuOIfCaQGl8xKqV1UMX4cCa/Y44x3e5RtTkNpPqcFy
+        4EAeaApa+7ncyiO5l1T9l74DeaApaO3ntiCxm1C9554DeaApaO3ntiC+E4985+Rt/gNo7ee2IBbEthES
+        0LCO7JiCvwP1A4zIJYMeZGgPAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="mnuDefendantRemove.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAL9JREFUOE/tjMEK
-        AWEUhecBvMV/Z/nzClY2LDCZJkVRfvIWlEl4Ey+kLEyDMdGYUNgd92/ULFhJ2Tj1dbvn3nOMv76kecbA
-        Ik9YFgS8ksC6IhDWGFtg7zA8A9637HtFwX8EnXnGk4KD20c0UojHCqepwnmWcpokfuQq7IcK4aD/psAx
-        cWwQLi3CtUO4dQn3HsNT75c2IW4S/xECy3wt8Co5+JbExpYIHImwnrJjtKdvflViVc6+FnzCM/7Xj2UY
-        D480niw1T8Z0AAAAAElFTkSuQmCC
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAv0lEQVQ4T+2MwQoBYRSF5wG8xX9n+fMK
+        VjYsMJkmRVF+8haUSXgTL6QsTIMx0ZhQ2B33b9QsWEnZOPV1u+fec4y/vqR5xsAiT1gWBLySwLoiENYY
+        W2DvMDwD3rfse0XBfwSdecaTgoPbRzRSiMcKp6nCeZZymiR+5CrshwrhoP+mwDFxbBAuLcK1Q7h1Cfce
+        w1PvlzYhbhL/EQLLfC3wKjn4lsTGlggcibCesmO0p29+VWJVzr4WfMIz/tePZRgPjzSeLDVPxnQAAAAA
+        SUVORK5CYII=
 </value>
   </data>
   <data name="mnuDefendantRefresh.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

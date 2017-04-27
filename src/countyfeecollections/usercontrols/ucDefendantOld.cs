@@ -28,14 +28,14 @@ using System.Windows.Forms;
 namespace county.feecollections
 {
 
-    public partial class ucDefendant : UserControl
+    public partial class ucDefendantOld : UserControl
     {
 
 
 
 
-        #region public ucDefendant()
-        public ucDefendant()
+        #region public ucDefendantOld()
+        public ucDefendantOld()
         {
             InitializeComponent();
 
@@ -44,7 +44,7 @@ namespace county.feecollections
                 ControlStyles.AllPaintingInWmPaint |
                 ControlStyles.OptimizedDoubleBuffer, true );
 
-            this.GotFocus += new EventHandler( ucDefendant_GotFocus );
+            this.GotFocus += new EventHandler( ucDefendantOld_GotFocus );
         } 
         #endregion
 
@@ -96,13 +96,6 @@ namespace county.feecollections
             this.tbDaysInJail.DataBindings.Add("Text", bindingDefendants, "DaysInJail", true, DataSourceUpdateMode.OnPropertyChanged);
             this.tbBookingNumber.DataBindings.Add("Text", bindingDefendants, "BookingNumber", true, DataSourceUpdateMode.OnPropertyChanged);
             this.tbJudgmentDate.DataBindings.Add("Text", bindingDefendants, "JudgmentDate", true, DataSourceUpdateMode.OnPropertyChanged, "", "MM/dd/yyyy");
-
-            this.cbxHasJudgmentFiled.DataBindings.Add("Checked", bindingDefendants, "HasJudgmentFiled", true, DataSourceUpdateMode.OnPropertyChanged);
-            this.tbJudgmentFiledDate.DataBindings.Add("Text", bindingDefendants, "JudgmentFiledDate", true, DataSourceUpdateMode.OnPropertyChanged, "", "MM/dd/yyyy");
-            this.cbxInBankruptcy.DataBindings.Add("Checked", bindingDefendants, "InBankruptcy", true, DataSourceUpdateMode.OnPropertyChanged);
-            this.tbBankruptcyDateFiled.DataBindings.Add("Text", bindingDefendants, "BankruptcyDateFiled", true, DataSourceUpdateMode.OnPropertyChanged, "", "MM/dd/yyyy");
-            this.tbBankruptcyEndDate.DataBindings.Add("Text", bindingDefendants, "BankruptcyEndDate", true, DataSourceUpdateMode.OnPropertyChanged, "", "MM/dd/yyyy");
-
             SetJailMode();
         }
         #endregion
@@ -113,63 +106,32 @@ namespace county.feecollections
             LocalUser user = new LocalUser();
             if (!user.JailMode)
             {
-                
-                if (!this.tabcontrolModeFields.TabPages.Contains(tabAttorneyPage))
-                {
-                    this.tabcontrolModeFields.TabPages.Add(tabAttorneyPage);
-                }
-                if (!this.tabcontrolModeFields.TabPages.Contains(tabBankruptcy))
-                {
-                    this.tabcontrolModeFields.TabPages.Add(tabBankruptcy);
-                }
-
-                this.tabcontrolModeFields.SelectedTab = this.tabAttorneyPage;
-
-                if (this.tabcontrolModeFields.TabPages.Contains(tabJailPage))
-                {
-                    this.tabcontrolModeFields.TabPages.Remove(tabJailPage);
-                }
-                //lblDaysInJail.Visible = false;
-                //tbDaysInJail.Visible = false;
-                //lblBookingNumber.Visible = false;
-                //tbBookingNumber.Visible = false;
-                //lblJudgmentDate.Visible = false;
-                //tbJudgmentDate.Visible = false;
-                //chkHasProbationOfficer.Visible = true;
-                //txtProbationOfficer.Visible = true;
+                lblDaysInJail.Visible = false;
+                tbDaysInJail.Visible = false;
+                lblBookingNumber.Visible = false;
+                tbBookingNumber.Visible = false;
+                lblJudgmentDate.Visible = false;
+                tbJudgmentDate.Visible = false;
+                chkHasProbationOfficer.Visible = true;
+                txtProbationOfficer.Visible = true;
 
             }
             else
             {
-                if (!this.tabcontrolModeFields.TabPages.Contains(tabJailPage))
-                {
-                    this.tabcontrolModeFields.TabPages.Add(tabJailPage);
-                }
-
-                this.tabcontrolModeFields.SelectedTab = this.tabJailPage;
-
-                if (this.tabcontrolModeFields.TabPages.Contains(tabAttorneyPage))
-                {
-                    this.tabcontrolModeFields.TabPages.Remove(tabAttorneyPage);
-                }
-                if (this.tabcontrolModeFields.TabPages.Contains(tabBankruptcy))
-                {
-                    this.tabcontrolModeFields.TabPages.Remove(tabBankruptcy);
-                }
-                //lblDaysInJail.Visible = true;
-                //tbDaysInJail.Visible = true;
-                //lblBookingNumber.Visible = true;
-                //tbBookingNumber.Visible = true;
-                //lblJudgmentDate.Visible = true;
-                //tbJudgmentDate.Visible = true;
-                //chkHasProbationOfficer.Visible = false;
-                //txtProbationOfficer.Visible = false;
+                lblDaysInJail.Visible = true;
+                tbDaysInJail.Visible = true;
+                lblBookingNumber.Visible = true;
+                tbBookingNumber.Visible = true;
+                lblJudgmentDate.Visible = true;
+                tbJudgmentDate.Visible = true;
+                chkHasProbationOfficer.Visible = false;
+                txtProbationOfficer.Visible = false;
             }
         }
         #endregion
 
-        #region private void ucDefendant_GotFocus( object sender, System.EventArgs e )
-        private void ucDefendant_GotFocus( object sender, System.EventArgs e )
+        #region private void ucDefendantOld_GotFocus( object sender, System.EventArgs e )
+        private void ucDefendantOld_GotFocus( object sender, System.EventArgs e )
         {
             this.txtFirstName.Focus();
             this.txtFirstName.Select( 0, 0 );
@@ -190,19 +152,5 @@ namespace county.feecollections
 
         }
         #endregion
-
-        private void cbxInBankruptcy_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tbBankruptcyDateFiled_Leave(object sender, EventArgs e)
-        {
-            if (null== Helper.MaskedTextBoxDate(this.tbBankruptcyEndDate.Text) && null!= Helper.MaskedTextBoxDate(this.tbBankruptcyDateFiled.Text))
-            {
-                DateTime? tempdate = Helper.MaskedTextBoxDate(this.tbBankruptcyDateFiled.Text); 
-                this.tbBankruptcyEndDate.Text = Helper.FormatLongDateString( tempdate.Value.AddDays(90)); 
-            }
-        }
     }
 }

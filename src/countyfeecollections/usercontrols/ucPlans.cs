@@ -140,11 +140,35 @@ namespace county.feecollections
             ucPayments.Enabled = IsEnabled;
             cmbPlans.Enabled = IsEnabled;
 
-        } 
+            SetJailMode();
+        }
         #endregion
 
-        #region private void mnuPlan_Click( object sender, EventArgs e )
-        private void mnuPlan_Click( object sender, EventArgs e )
+        #region SetJailMode
+        public void SetJailMode()
+        {
+            //Jail enhancements
+            LocalUser user = new LocalUser();
+            if (user.JailMode)
+            {
+                chkCAPP.Visible = false;
+                chkNonCAPP.Visible = false;
+                chkFiled.Visible = false;
+                chkNoncompliance.Visible = false;
+                chkInsurance.Visible = false;
+            }
+            else
+            {
+                chkCAPP.Visible = true;
+                chkNonCAPP.Visible = true;
+                chkFiled.Visible = true;
+                chkNoncompliance.Visible = true;
+                chkInsurance.Visible = true;
+            }
+        }
+            #endregion
+            #region private void mnuPlan_Click( object sender, EventArgs e )
+            private void mnuPlan_Click( object sender, EventArgs e )
         {
 
             /********************************************************************************
@@ -165,6 +189,10 @@ namespace county.feecollections
 
                         Plan plan = new Plan( ((Defendant)((BindingSource)bindingPlans.DataSource).Current).ID );
                         plan.PlanName = frm.PlanName;
+                        if (plan.PlanName.StartsWith("OWMG"))
+                        {
+                            plan.CAPP = true;
+                        }
 
                         ((Plan)bindingPlans[bindingPlans.Add( plan )]).MyState = MyObjectState.New;
 

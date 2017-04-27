@@ -37,7 +37,7 @@ namespace county.feecollections
             DataSet ds = new DataSet();
             System.Data.DataTable dt = new System.Data.DataTable();
 
-            string sql = "Print_DelinquentNotices";
+            string sql = "Print_DelinquentNoticesExcludeBankruptcy";
 
             using (SqlConnection con = DBSettings.NewSqlConnectionClosed)
             using (SqlCommand cmd = new SqlCommand(sql, con))

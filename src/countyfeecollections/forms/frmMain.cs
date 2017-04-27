@@ -969,7 +969,15 @@ namespace county.feecollections
         #endregion
 
 
+        public void SetJailMode()
+        {
+            this.ucDefendant.SetJailMode();
+            this.ucPlans.SetJailMode();
+        }
 
+        private void ucDefendant_Load(object sender, EventArgs e)
+        {
 
+        }
     }
 }
