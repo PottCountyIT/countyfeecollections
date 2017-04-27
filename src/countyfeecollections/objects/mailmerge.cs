@@ -435,43 +435,45 @@ namespace county.feecollections
             wrdTable.Cell( 1, 20 ).Range.InsertAfter( "Employer_City" );
             wrdTable.Cell( 1, 21 ).Range.InsertAfter( "Employer_State" );
             wrdTable.Cell( 1, 22 ).Range.InsertAfter( "Employer_Zip" );
-            wrdTable.Cell( 1, 23 ).Range.InsertAfter( "Employer_Phone" );
-            wrdTable.Cell( 1, 24 ).Range.InsertAfter( "Plan" );
-            wrdTable.Cell( 1, 25 ).Range.InsertAfter( "Plan_Name" );
-            wrdTable.Cell( 1, 26 ).Range.InsertAfter( "Plan_Remaining_Balance" );
-            wrdTable.Cell( 1, 27 ).Range.InsertAfter( "Payment_Arrangements" );
-            wrdTable.Cell( 1, 28 ).Range.InsertAfter( "Payment_Arrangement_Pay_Period" );
-            wrdTable.Cell( 1, 29 ).Range.InsertAfter( "Payment_Arrangement_Type" );
-            wrdTable.Cell( 1, 30 ).Range.InsertAfter( "Payment_Arrangement_Amount" );
-            wrdTable.Cell( 1, 31 ).Range.InsertAfter( "Payment_Arrangement_Start_Date" );
-            wrdTable.Cell( 1, 32 ).Range.InsertAfter( "Payment_Arrangement_End_Date" );
-            wrdTable.Cell( 1, 33 ).Range.InsertAfter( "Cases" );
-            wrdTable.Cell( 1, 34 ).Range.InsertAfter( "Case_Name" );
-            wrdTable.Cell( 1, 35 ).Range.InsertAfter( "Case_County" );
-            wrdTable.Cell( 1, 36 ).Range.InsertAfter( "Case_CAPP" );
-            wrdTable.Cell( 1, 37 ).Range.InsertAfter( "Case_Committed" );
-            wrdTable.Cell( 1, 38 ).Range.InsertAfter( "Fees" );
-            wrdTable.Cell( 1, 39 ).Range.InsertAfter( "Fees_Total_Due" );
-            wrdTable.Cell( 1, 40 ).Range.InsertAfter( "Fee_Type" );
-            wrdTable.Cell( 1, 41 ).Range.InsertAfter( "Fee_Type_Amount" );
-            wrdTable.Cell( 1, 42 ).Range.InsertAfter( "Full_Name" );
-            wrdTable.Cell( 1, 43 ).Range.InsertAfter( "Full_Address" );
+            //wrdTable.Cell( 1, 23 ).Range.InsertAfter( "Employer_Phone" );   <-- commented out to make from for Jail Admin cost and Jail Medical, see also CAPP
+            wrdTable.Cell( 1, 23 ).Range.InsertAfter( "Plan" );
+            wrdTable.Cell( 1, 24 ).Range.InsertAfter( "Plan_Name" );
+            wrdTable.Cell( 1, 25 ).Range.InsertAfter( "Plan_Remaining_Balance" );
+            wrdTable.Cell( 1, 26 ).Range.InsertAfter( "Payment_Arrangements" );
+            wrdTable.Cell( 1, 27 ).Range.InsertAfter( "Payment_Arrangement_Pay_Period" );
+            wrdTable.Cell( 1, 28 ).Range.InsertAfter( "Payment_Arrangement_Type" );
+            wrdTable.Cell( 1, 29 ).Range.InsertAfter( "Payment_Arrangement_Amount" );
+            wrdTable.Cell( 1, 30 ).Range.InsertAfter( "Payment_Arrangement_Start_Date" );
+            wrdTable.Cell( 1, 31 ).Range.InsertAfter( "Payment_Arrangement_End_Date" );
+            wrdTable.Cell( 1, 32 ).Range.InsertAfter( "Cases" );
+            wrdTable.Cell( 1, 33 ).Range.InsertAfter( "Case_Name" );
+            wrdTable.Cell( 1, 34 ).Range.InsertAfter( "Case_County" );
+            wrdTable.Cell( 1, 35 ).Range.InsertAfter( "Case_CAPP" );
+            wrdTable.Cell( 1, 36 ).Range.InsertAfter( "Case_Committed" );
+            wrdTable.Cell( 1, 37 ).Range.InsertAfter( "Fees" );  
+            wrdTable.Cell( 1, 38 ).Range.InsertAfter( "Fees_Total_Due" );  
+            wrdTable.Cell( 1, 39 ).Range.InsertAfter( "Fee_Type" );  
+            wrdTable.Cell( 1, 40 ).Range.InsertAfter( "Fee_Type_Amount" );  
+            wrdTable.Cell( 1, 41 ).Range.InsertAfter( "Full_Name" );  
+            wrdTable.Cell( 1, 42 ).Range.InsertAfter( "Full_Address" );  
 
-            wrdTable.Cell( 1, 44 ).Range.InsertAfter( "CAPP_Cases" );
-            wrdTable.Cell( 1, 45 ).Range.InsertAfter( "CAPP_Case_Name" );
-            wrdTable.Cell( 1, 46 ).Range.InsertAfter( "CAPP_Case_County" );
-            wrdTable.Cell( 1, 47 ).Range.InsertAfter( "CAPP_Case_CAPP" );
-            wrdTable.Cell( 1, 48 ).Range.InsertAfter( "CAPP_Case_Committed" );
+            wrdTable.Cell( 1, 43 ).Range.InsertAfter( "CAPP_Cases" );
+            wrdTable.Cell( 1, 44 ).Range.InsertAfter( "CAPP_Case_Name" );
+            wrdTable.Cell( 1, 45 ).Range.InsertAfter( "CAPP_Case_County" );
+            wrdTable.Cell( 1, 46 ).Range.InsertAfter( "CAPP_Case_CAPP" );
+            //wrdTable.Cell( 1, 47 ).Range.InsertAfter( "CAPP_Case_Committed" );  <-- commented out to make from for Jail Admin cost and Jail Medical, see also Employer_Phone
 
-            wrdTable.Cell( 1, 49 ).Range.InsertAfter( "NonCAPP_Cases" );
-            wrdTable.Cell( 1, 50 ).Range.InsertAfter( "NonCAPP_Case_Name" );
-            wrdTable.Cell( 1, 51 ).Range.InsertAfter( "NonCAPP_Case_County" );
-            wrdTable.Cell( 1, 52 ).Range.InsertAfter( "NonCAPP_Case_CAPP" );
-            wrdTable.Cell( 1, 53 ).Range.InsertAfter( "NonCAPP_Case_Committed" );
-            wrdTable.Cell(1, 54).Range.InsertAfter("Court_Fines");
-            wrdTable.Cell(1, 55).Range.InsertAfter("Restitution");
-            wrdTable.Cell(1, 56).Range.InsertAfter("Civil_Penalties");
-            wrdTable.Cell(1, 57).Range.InsertAfter("Jail_Room_And_Board");
+            wrdTable.Cell( 1, 47 ).Range.InsertAfter( "NonCAPP_Cases" );
+            wrdTable.Cell( 1, 48 ).Range.InsertAfter( "NonCAPP_Case_Name" );
+            wrdTable.Cell( 1, 49 ).Range.InsertAfter( "NonCAPP_Case_County" );
+            wrdTable.Cell( 1, 50 ).Range.InsertAfter( "NonCAPP_Case_CAPP" );
+            wrdTable.Cell( 1, 51 ).Range.InsertAfter( "NonCAPP_Case_Committed" ); 
+            wrdTable.Cell(1, 52).Range.InsertAfter("Court_Fines");
+            wrdTable.Cell(1, 53).Range.InsertAfter("Restitution");
+            wrdTable.Cell(1, 54).Range.InsertAfter("Civil_Penalties");
+            wrdTable.Cell(1, 55).Range.InsertAfter("Jail_Room_And_Board");
+            wrdTable.Cell(1, 56).Range.InsertAfter("CJail_Admin_cost");
+            wrdTable.Cell(1, 57).Range.InsertAfter("Jail_Medical");
 
             wrdTable.Cell(1, 58).Range.InsertAfter("Days_In_Jail");
             wrdTable.Cell(1, 59).Range.InsertAfter("Booking_Number");
@@ -492,7 +494,7 @@ namespace county.feecollections
   "        SELECT  TOP 1 firstname, middlename, lastname, aka, ssn, birthdate, driverslicense,  "
 + "		           Defendant.street1, Defendant.street2, Defendant.city, a.abbreviation AS [state], Defendant.zip, phonehome, phonemobile, probationofficer, "
 + "		           Employer.employername, Employer.Street1 AS employer_street1, Employer.Street2 AS employer_street2, Employer.City AS employer_city, "
-+ "		           b.abbreviation AS employer_state, Employer.Zip AS employer_zip, Employer.Phone AS employer_phone, "
++ "		           b.abbreviation AS employer_state, Employer.Zip AS employer_zip, Employer.Phone AS employer_phone,  " 
 + "		           planname, "
 + "				   ( "
 + "           SELECT SUM(total) AS balance "
@@ -548,7 +550,7 @@ namespace county.feecollections
                 + "AND planid = @planId; ";
 
             string sql3 = "SELECT SUM(CourtFines) AS CourtFines, SUM(Restitution) AS Restitution, "
-                    + "SUM(CivilPenalties) AS CivilPenalties, SUM(JailRoomAndBoard) AS JailRoomAndBoard FROM "
+                    + "SUM(CivilPenalties) AS CivilPenalties, SUM(JailRoomAndBoard) AS JailRoomAndBoard, SUM(JailAdmincost) as JailAdmincost, SUM(JailMedical) as JailMedical FROM "
                     + "(SELECT "
 	                + "CASE feetypeid "
 		            + "WHEN 19 THEN amount "
@@ -566,6 +568,14 @@ namespace county.feecollections
 		            + "WHEN 22 THEN amount "
 		            + "ELSE 0.00 "
 	                + "END AS JailRoomAndBoard "
+                    + "Case feetypeid "
+                    + "WHEN 25 THEN amount " //guessing that JailAdmincost will be feetypeid 25 in their database
+                    + "ELSE 0.00 "
+                    + "END AS JailAdmincost "
+                    + "Case feetypeid "
+                    + "WHEN 26 THEN amount "  //guessing that JailMedical will be 26
+                    + "ELSE 0.00 "
+                    + "END AS JailMedical "
                     + "FROM PlanFee WHERE defendantid = @defendantId AND planid = @planId) AS FeeBreakDown";
 
 
@@ -665,7 +675,7 @@ namespace county.feecollections
                 tempStr += ds.Tables["General"].Rows[0]["employer_zip"].ToString();
             }
 
-            if( !string.IsNullOrEmpty( ds.Tables["General"].Rows[0]["employer_phone"].ToString() ) )
+            if (!string.IsNullOrEmpty(ds.Tables["General"].Rows[0]["employer_phone"].ToString()))
             {
                 tempStr += "\n" + ds.Tables["General"].Rows[0]["employer_phone"].ToString();
             }
@@ -677,7 +687,7 @@ namespace county.feecollections
             wrdTable.Cell( 2, 20 ).Range.InsertAfter( ds.Tables["General"].Rows[0]["employer_city"].ToString() );
             wrdTable.Cell( 2, 21 ).Range.InsertAfter( ds.Tables["General"].Rows[0]["employer_state"].ToString() );
             wrdTable.Cell( 2, 22 ).Range.InsertAfter( ds.Tables["General"].Rows[0]["employer_zip"].ToString() );
-            wrdTable.Cell( 2, 23 ).Range.InsertAfter( ds.Tables["General"].Rows[0]["employer_phone"].ToString() );
+            // wrdTable.Cell( 2, 23 ).Range.InsertAfter( ds.Tables["General"].Rows[0]["employer_phone"].ToString() );  < --commented out to make from for Jail Admin cost and Jail Medical, see also CAPP
 
             tempStr = "";
             tempStr += ds.Tables["General"].Rows[0]["planname"].ToString();
@@ -685,11 +695,11 @@ namespace county.feecollections
             if( !string.IsNullOrEmpty( ds.Tables["General"].Rows[0]["plan_remaining_balance"].ToString() ) )
             {
                 tempStr += "\t\t" + Convert.ToDouble( ds.Tables["General"].Rows[0]["plan_remaining_balance"]).ToString( "c2" );
-                wrdTable.Cell( 2, 26 ).Range.InsertAfter( Convert.ToDouble( ds.Tables["General"].Rows[0]["plan_remaining_balance"] ).ToString( "c2" ) );
+                wrdTable.Cell( 2, 25 ).Range.InsertAfter( Convert.ToDouble( ds.Tables["General"].Rows[0]["plan_remaining_balance"] ).ToString( "c2" ) );
             }
             
-            wrdTable.Cell( 2, 24 ).Range.InsertAfter(  tempStr );
-            wrdTable.Cell( 2, 25 ).Range.InsertAfter( ds.Tables["General"].Rows[0]["planname"].ToString() );
+            wrdTable.Cell( 2, 23 ).Range.InsertAfter(  tempStr );
+            wrdTable.Cell( 2, 24 ).Range.InsertAfter( ds.Tables["General"].Rows[0]["planname"].ToString() );
 
             if( !string.IsNullOrEmpty( ds.Tables["General"].Rows[0]["plan_remaining_balance"].ToString() ) )
             {
@@ -704,22 +714,22 @@ namespace county.feecollections
                 tempStr = ds.Tables["General"].Rows[0]["payperiodtype"].ToString()
                     + "\t" + ds.Tables["General"].Rows[0]["paymentarrangementtype"].ToString()
                     + "\t" + Convert.ToDouble( ds.Tables["General"].Rows[0]["payment_arrangement_amount"] ).ToString( "c2" );
-                wrdTable.Cell(2, 28).Range.InsertAfter(ds.Tables["General"].Rows[0]["payperiodtype"].ToString());
-                wrdTable.Cell(2, 29).Range.InsertAfter(ds.Tables["General"].Rows[0]["paymentarrangementtype"].ToString());
-                wrdTable.Cell(2, 30).Range.InsertAfter(Convert.ToDouble(ds.Tables["General"].Rows[0]["payment_arrangement_amount"]).ToString("c2"));
+                wrdTable.Cell(2, 27).Range.InsertAfter(ds.Tables["General"].Rows[0]["payperiodtype"].ToString());
+                wrdTable.Cell(2, 28).Range.InsertAfter(ds.Tables["General"].Rows[0]["paymentarrangementtype"].ToString());
+                wrdTable.Cell(2, 29).Range.InsertAfter(Convert.ToDouble(ds.Tables["General"].Rows[0]["payment_arrangement_amount"]).ToString("c2"));
             }
             
             if( DateTime.TryParse( ds.Tables["General"].Rows[0]["startdate"].ToString(), out tempDate ) )
             {
-                wrdTable.Cell( 2, 31 ).Range.InsertAfter( tempDate.ToString( "d" ) );
+                wrdTable.Cell( 2, 30 ).Range.InsertAfter( tempDate.ToString( "d" ) );
                 tempStr += "\t" + tempDate.ToString( "d" ) ;
             }
             if( DateTime.TryParse( ds.Tables["General"].Rows[0]["enddate"].ToString(), out tempDate ) )
             {
-                wrdTable.Cell( 2, 32 ).Range.InsertAfter( tempDate.ToString( "d" ) );
+                wrdTable.Cell( 2, 31 ).Range.InsertAfter( tempDate.ToString( "d" ) );
                 tempStr += "\t" + tempDate.ToString( "d" );
             }
-            wrdTable.Cell( 2, 27 ).Range.InsertAfter( tempStr );
+            wrdTable.Cell( 2, 26 ).Range.InsertAfter( tempStr );
 
             // building string for all defendant cases; also buidling strings separated by CAPP and NonCAPP case types
             StringBuilder strPlanCasesDetail = new StringBuilder();
@@ -782,27 +792,29 @@ namespace county.feecollections
                 }
             }
 
-            wrdTable.Cell( 2, 33 ).Range.InsertAfter( strPlanCasesDetail.ToString() );
-            wrdTable.Cell( 2, 34 ).Range.InsertAfter( strPlanCases.ToString() );
-            wrdTable.Cell( 2, 35 ).Range.InsertAfter( strCaseCounties.ToString() );
-            wrdTable.Cell( 2, 36 ).Range.InsertAfter( strCaseCAPP.ToString() );
-            wrdTable.Cell( 2, 37 ).Range.InsertAfter( strCaseCommitted.ToString() );
+            wrdTable.Cell( 2, 32 ).Range.InsertAfter( strPlanCasesDetail.ToString() );
+            wrdTable.Cell( 2, 33 ).Range.InsertAfter( strPlanCases.ToString() );
+            wrdTable.Cell( 2, 34 ).Range.InsertAfter( strCaseCounties.ToString() );
+            wrdTable.Cell( 2, 35 ).Range.InsertAfter( strCaseCAPP.ToString() );
+            wrdTable.Cell( 2, 36 ).Range.InsertAfter( strCaseCommitted.ToString() );
 
-            wrdTable.Cell( 2, 44 ).Range.InsertAfter( strCAPP_PlanCasesDetail.ToString() );
-            wrdTable.Cell( 2, 45 ).Range.InsertAfter( strCAPP_PlanCases.ToString() );
-            wrdTable.Cell( 2, 46 ).Range.InsertAfter( strCAPP_CaseCounties.ToString() );
-            wrdTable.Cell( 2, 47 ).Range.InsertAfter( strCAPP_CaseCAPP.ToString() );
-            wrdTable.Cell( 2, 48 ).Range.InsertAfter( strCAPP_CaseCommitted.ToString() );
+            wrdTable.Cell( 2, 43 ).Range.InsertAfter( strCAPP_PlanCasesDetail.ToString() );
+            wrdTable.Cell( 2, 44 ).Range.InsertAfter( strCAPP_PlanCases.ToString() );
+            wrdTable.Cell( 2, 45 ).Range.InsertAfter( strCAPP_CaseCounties.ToString() );
+            wrdTable.Cell( 2, 46 ).Range.InsertAfter( strCAPP_CaseCAPP.ToString() );
+            // wrdTable.Cell( 2, 48 ).Range.InsertAfter( strCAPP_CaseCommitted.ToString() );  <-- commented to make room for Jail Admin cost and Jail Medical
 
-            wrdTable.Cell( 2, 49 ).Range.InsertAfter( strNonCAPP_PlanCasesDetail.ToString() );
-            wrdTable.Cell( 2, 50 ).Range.InsertAfter( strNonCAPP_PlanCases.ToString() );
-            wrdTable.Cell( 2, 51 ).Range.InsertAfter( strNonCAPP_CaseCounties.ToString() );
-            wrdTable.Cell( 2, 52 ).Range.InsertAfter( strNonCAPP_CaseCAPP.ToString() );
-            wrdTable.Cell( 2, 53 ).Range.InsertAfter( strNonCAPP_CaseCommitted.ToString() );
-            wrdTable.Cell(2, 54).Range.InsertAfter("$" + ds.Tables["FeeBreakDown"].Rows[0]["CourtFines"].ToString());
-            wrdTable.Cell(2, 55).Range.InsertAfter("$" + ds.Tables["FeeBreakDown"].Rows[0]["Restitution"].ToString());
-            wrdTable.Cell(2, 56).Range.InsertAfter("$" + ds.Tables["FeeBreakDown"].Rows[0]["CivilPenalties"].ToString());
-            wrdTable.Cell(2, 57).Range.InsertAfter("$" + ds.Tables["FeeBreakDown"].Rows[0]["JailRoomAndBoard"].ToString());
+            wrdTable.Cell( 2, 47 ).Range.InsertAfter( strNonCAPP_PlanCasesDetail.ToString() );
+            wrdTable.Cell( 2, 48 ).Range.InsertAfter( strNonCAPP_PlanCases.ToString() );
+            wrdTable.Cell( 2, 49 ).Range.InsertAfter( strNonCAPP_CaseCounties.ToString() );
+            wrdTable.Cell( 2, 50 ).Range.InsertAfter( strNonCAPP_CaseCAPP.ToString() );
+            wrdTable.Cell( 2, 52 ).Range.InsertAfter( strNonCAPP_CaseCommitted.ToString() );
+            wrdTable.Cell(2, 52).Range.InsertAfter("$" + ds.Tables["FeeBreakDown"].Rows[0]["CourtFines"].ToString());
+            wrdTable.Cell(2, 53).Range.InsertAfter("$" + ds.Tables["FeeBreakDown"].Rows[0]["Restitution"].ToString());
+            wrdTable.Cell(2, 54).Range.InsertAfter("$" + ds.Tables["FeeBreakDown"].Rows[0]["CivilPenalties"].ToString());
+            wrdTable.Cell(2, 55).Range.InsertAfter("$" + ds.Tables["FeeBreakDown"].Rows[0]["JailRoomAndBoard"].ToString());
+            wrdTable.Cell(2, 56).Range.InsertAfter("$" + ds.Tables["FeeBreakDown"].Rows[0]["JailAdmincost"].ToString());
+            wrdTable.Cell(2, 57).Range.InsertAfter("$" + ds.Tables["FeeBreakDown"].Rows[0]["JailMedical"].ToString());
 
             wrdTable.Cell(2, 58).Range.InsertAfter(ds.Tables["General"].Rows[0]["daysinjail"].ToString());
             wrdTable.Cell(2, 59).Range.InsertAfter(ds.Tables["General"].Rows[0]["bookingnumber"].ToString());
@@ -847,13 +859,13 @@ namespace county.feecollections
 
             tempStr += "Total Fees\t" + dblFeesTotal.ToString( "C2" );
 
-            wrdTable.Cell( 2, 38 ).Range.InsertAfter( tempStr );
-            wrdTable.Cell( 2, 39 ).Range.InsertAfter( dblFeesTotal.ToString( "C2" ) );
-            wrdTable.Cell( 2, 40 ).Range.InsertAfter( strFeeType );
-            wrdTable.Cell( 2, 41 ).Range.InsertAfter( strFeeTypeAmount );
+            wrdTable.Cell( 2, 37 ).Range.InsertAfter( tempStr );
+            wrdTable.Cell( 2, 38 ).Range.InsertAfter( dblFeesTotal.ToString( "C2" ) );
+            wrdTable.Cell( 2, 39 ).Range.InsertAfter( strFeeType );
+            wrdTable.Cell( 2, 40 ).Range.InsertAfter( strFeeTypeAmount );
 
             // creating field for firstname lastname
-            wrdTable.Cell( 2, 42 ).Range.InsertAfter( ds.Tables["General"].Rows[0]["firstname"].ToString() + " " + ds.Tables["General"].Rows[0]["lastname"].ToString() );
+            wrdTable.Cell( 2, 41 ).Range.InsertAfter( ds.Tables["General"].Rows[0]["firstname"].ToString() + " " + ds.Tables["General"].Rows[0]["lastname"].ToString() );
             
             // creating full address field
             tempStr = "";
@@ -877,7 +889,7 @@ namespace county.feecollections
             tempStr += " " + ds.Tables["General"].Rows[0]["state"].ToString()
                 + " " + ds.Tables["General"].Rows[0]["zip"].ToString();
 
-            wrdTable.Cell( 2, 43 ).Range.InsertAfter( tempStr );
+            wrdTable.Cell( 2, 42 ).Range.InsertAfter( tempStr );
         }
 
         private static void FillPreviewSource( Table wrdTable )
@@ -897,12 +909,12 @@ namespace county.feecollections
             wrdTable.Cell( 2, 13 ).Range.InsertAfter( "Home_Phone" );
             wrdTable.Cell( 2, 14 ).Range.InsertAfter( "Mobile_Phone" );
             wrdTable.Cell( 2, 15 ).Range.InsertAfter( "Probation_Officer" );
-            wrdTable.Cell( 2, 16 ).Range.InsertAfter( "Employer_Name" + "\n"
+            wrdTable.Cell(2, 16).Range.InsertAfter("Employer_Name" + "\n"
                     + "Employer_Street1" + "\n"
                     + "Employer_Street2" + "\n"
                     + "Employer_City" + ", " + "Employer_State" + " "
                     + "Employer_Zip" + "\n"
-                    + "Employer_Phone" );
+                    + "Employer_Phone" );  
 
             wrdTable.Cell( 2, 17 ).Range.InsertAfter( "Employer_Name" );
             wrdTable.Cell( 2, 18 ).Range.InsertAfter( "Employer_Street1" );
@@ -910,43 +922,45 @@ namespace county.feecollections
             wrdTable.Cell( 2, 20 ).Range.InsertAfter( "Employer_City" );
             wrdTable.Cell( 2, 21 ).Range.InsertAfter( "Employer_State" );
             wrdTable.Cell( 2, 22 ).Range.InsertAfter( "Employer_Zip" );
-            wrdTable.Cell( 2, 23 ).Range.InsertAfter( "Employer_Phone" );
-            wrdTable.Cell( 2, 24 ).Range.InsertAfter( "Plan_Name\t\tPlan_Remaining_Balance" );
-            wrdTable.Cell( 2, 25 ).Range.InsertAfter( "Plan_Name" );
-            wrdTable.Cell( 2, 26 ).Range.InsertAfter( "Plan_Remaining_Balance" );
-            wrdTable.Cell( 2, 27 ).Range.InsertAfter( "Payment_Arrangement_Pay_Period\tPayment_Arrangement_Type\tPayment_Arrangement_Amount\tPayment_Arrangement_Start_Date\tPayment_Arrangement_End_Date" );
-            wrdTable.Cell( 2, 28 ).Range.InsertAfter( "Payment_Arrangement_Pay_Period" );
-            wrdTable.Cell( 2, 29 ).Range.InsertAfter( "Payment_Arrangement_Type" );
-            wrdTable.Cell( 2, 30 ).Range.InsertAfter( "Payment_Arrangement_Amount" );
-            wrdTable.Cell( 2, 31 ).Range.InsertAfter( "Payment_Arrangement_Start_Date" );
-            wrdTable.Cell( 2, 32 ).Range.InsertAfter( "Payment_Arrangement_End_Date" );
-            wrdTable.Cell( 2, 33 ).Range.InsertAfter( "Case_Name\tCase_County\tCase_CAPP\tCase_Committed\n" );
-            wrdTable.Cell( 2, 34 ).Range.InsertAfter( "Case_Name" );
-            wrdTable.Cell( 2, 35 ).Range.InsertAfter( "Case_County" );
-            wrdTable.Cell( 2, 36 ).Range.InsertAfter( "Case_CAPP" );
-            wrdTable.Cell( 2, 37 ).Range.InsertAfter( "Case_Committed" );
-            wrdTable.Cell( 2, 38 ).Range.InsertAfter( "Fee_Type\tFee_Type_Amount\nTotal Fees\tFees_Total_Due" );
-            wrdTable.Cell( 2, 39 ).Range.InsertAfter( "Fees_Total_Due" );
-            wrdTable.Cell( 2, 40 ).Range.InsertAfter( "Fee Type" );
-            wrdTable.Cell( 2, 41 ).Range.InsertAfter( "Fee_Type_Amount" );
-            wrdTable.Cell( 2, 42 ).Range.InsertAfter( "First_Name Last_Name" );
-            wrdTable.Cell( 2, 43 ).Range.InsertAfter( "Street1\nStreet2\nCity, State, Zip" );
+            //wrdTable.Cell( 2, 23 ).Range.InsertAfter( "Employer_Phone" );  < --commented out to make from for Jail Admin cost and Jail Medical, see also CAPP
+            wrdTable.Cell( 2, 23 ).Range.InsertAfter( "Plan_Name\t\tPlan_Remaining_Balance" );
+            wrdTable.Cell( 2, 24 ).Range.InsertAfter( "Plan_Name" );
+            wrdTable.Cell( 2, 25 ).Range.InsertAfter( "Plan_Remaining_Balance" );
+            wrdTable.Cell( 2, 26 ).Range.InsertAfter( "Payment_Arrangement_Pay_Period\tPayment_Arrangement_Type\tPayment_Arrangement_Amount\tPayment_Arrangement_Start_Date\tPayment_Arrangement_End_Date" );
+            wrdTable.Cell( 2, 27 ).Range.InsertAfter( "Payment_Arrangement_Pay_Period" );
+            wrdTable.Cell( 2, 28 ).Range.InsertAfter( "Payment_Arrangement_Type" );
+            wrdTable.Cell( 2, 29 ).Range.InsertAfter( "Payment_Arrangement_Amount" );
+            wrdTable.Cell( 2, 30 ).Range.InsertAfter( "Payment_Arrangement_Start_Date" );
+            wrdTable.Cell( 2, 31 ).Range.InsertAfter( "Payment_Arrangement_End_Date" );
+            wrdTable.Cell( 2, 32 ).Range.InsertAfter( "Case_Name\tCase_County\tCase_CAPP\tCase_Committed\n" );
+            wrdTable.Cell( 2, 33 ).Range.InsertAfter( "Case_Name" );
+            wrdTable.Cell( 2, 34 ).Range.InsertAfter( "Case_County" );
+            wrdTable.Cell( 2, 35 ).Range.InsertAfter( "Case_CAPP" );
+            wrdTable.Cell( 2, 36 ).Range.InsertAfter( "Case_Committed" );
+            wrdTable.Cell( 2, 37 ).Range.InsertAfter( "Fee_Type\tFee_Type_Amount\nTotal Fees\tFees_Total_Due" );
+            wrdTable.Cell( 2, 38 ).Range.InsertAfter( "Fees_Total_Due" );
+            wrdTable.Cell( 2, 39 ).Range.InsertAfter( "Fee Type" );
+            wrdTable.Cell( 2, 40 ).Range.InsertAfter( "Fee_Type_Amount" );
+            wrdTable.Cell( 2, 41 ).Range.InsertAfter( "First_Name Last_Name" );
+            wrdTable.Cell( 2, 42 ).Range.InsertAfter( "Street1\nStreet2\nCity, State, Zip" );
 
-            wrdTable.Cell( 2, 44 ).Range.InsertAfter( "CAPP_Case_Name\tCAPP_Case_County\tCAPP_Case_CAPP\tCAPP_Case_Committed" );
-            wrdTable.Cell( 2, 45 ).Range.InsertAfter( "CAPP_Case_Name" );
-            wrdTable.Cell( 2, 46 ).Range.InsertAfter( "CAPP_Case_County" );
-            wrdTable.Cell( 2, 47 ).Range.InsertAfter( "CAPP_Case_CAPP" );
-            wrdTable.Cell( 2, 48 ).Range.InsertAfter( "CAPP_Case_Committed" );
+            wrdTable.Cell( 2, 43 ).Range.InsertAfter( "CAPP_Case_Name\tCAPP_Case_County\tCAPP_Case_CAPP\tCAPP_Case_Committed" );
+            wrdTable.Cell( 2, 44 ).Range.InsertAfter( "CAPP_Case_Name" );
+            wrdTable.Cell( 2, 45 ).Range.InsertAfter( "CAPP_Case_County" );
+            wrdTable.Cell( 2, 46 ).Range.InsertAfter( "CAPP_Case_CAPP" );
+            //wrdTable.Cell( 2, 47 ).Range.InsertAfter( "CAPP_Case_Committed" );   < --commented out to make from for Jail Admin cost and Jail Medical, see also Employer_Phone
 
-            wrdTable.Cell( 2, 49 ).Range.InsertAfter( "NonCAPP_Case_Name\tNonCAPP_Case_County\tNonCAPP_Case_CAPP\tNonCAPP_Case_Committed" );
-            wrdTable.Cell( 2, 50 ).Range.InsertAfter( "NonCAPP_Case_Name" );
-            wrdTable.Cell( 2, 51 ).Range.InsertAfter( "NonCAPP_Case_County" );
-            wrdTable.Cell( 2, 52 ).Range.InsertAfter( "NonCAPP_Case_CAPP" );
-            wrdTable.Cell( 2, 53 ).Range.InsertAfter( "NonCAPP_Case_Committed" );
-            wrdTable.Cell( 2, 54).Range.InsertAfter("Court_Fines");
-            wrdTable.Cell( 2, 55).Range.InsertAfter("Restitution");
-            wrdTable.Cell( 2, 56).Range.InsertAfter("Civil_Penalties");
-            wrdTable.Cell( 2, 57).Range.InsertAfter("Jail_Room_And_Board");
+            wrdTable.Cell( 2, 47 ).Range.InsertAfter( "NonCAPP_Case_Name\tNonCAPP_Case_County\tNonCAPP_Case_CAPP\tNonCAPP_Case_Committed" );
+            wrdTable.Cell( 2, 48 ).Range.InsertAfter( "NonCAPP_Case_Name" );
+            wrdTable.Cell( 2, 49 ).Range.InsertAfter( "NonCAPP_Case_County" );
+            wrdTable.Cell( 2, 50 ).Range.InsertAfter( "NonCAPP_Case_CAPP" );
+            wrdTable.Cell( 2, 51 ).Range.InsertAfter( "NonCAPP_Case_Committed" );
+            wrdTable.Cell( 2, 52).Range.InsertAfter("Court_Fines");
+            wrdTable.Cell( 2, 53).Range.InsertAfter("Restitution");
+            wrdTable.Cell( 2, 54).Range.InsertAfter("Civil_Penalties");
+            wrdTable.Cell( 2, 55).Range.InsertAfter("Jail_Room_And_Board");
+            wrdTable.Cell(2, 56).Range.InsertAfter("Jail_Admin_cost");
+            wrdTable.Cell(2, 57).Range.InsertAfter("Jail_Medical");
 
             wrdTable.Cell(2, 58).Range.InsertAfter("Days_In_Jail");
             wrdTable.Cell(2, 59).Range.InsertAfter("Booking_Number");
